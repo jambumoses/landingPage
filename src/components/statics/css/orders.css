@@ -1,0 +1,151 @@
+.filterbar{
+    display: flex;
+    flex-direction: row;
+    color: white;
+    background-color: black;
+    padding: 0px 10%;
+    font-size: 17px;
+    padding-top: 150px;
+    text-transform: capitalize;
+}
+
+.filterbar select{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: lightgray;
+    padding: 0px 10px;
+    margin-left: 10px;
+    text-transform: capitalize;
+    font-family: poppins,sans-serif;
+    font-size: 14px;
+}
+
+.filterbar select option{
+    font-size: 14px;
+    background-color: black;
+    color: lightgray;
+    border: none;
+    outline: none;
+}
+
+.order_section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    background-color: black;
+    padding: 5%;
+    padding-top: 10px;
+}
+
+.order_section_card{
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    height: 400px;
+    width: 300px;
+    margin: 20px;
+}
+
+.order_section_card_img{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70%;
+    background-color: rgb(233, 233, 233);
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+.order_section_card_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.order_section_card_title{
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    height: 10%;
+    padding-left: 5px;
+}
+
+.order_section_card_title a{
+    text-transform: capitalize;
+    color: rgb(70, 70, 70);
+    color: white;
+    text-decoration: none;
+    transition: 0.2s linear;
+}
+
+.order_section_card_title a:hover{
+    /* color: rgb(41, 41, 41); */
+    color: grey;
+    transition: 0.2s linear;
+}
+.order_section_card_price{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: transparent;
+    color: white;
+    font-weight: bold;
+    font-family: poppins;
+    height: 10%;
+    padding: 0px 5px;
+}
+
+.order_section_card_price span{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-family: poppins;
+    height: 100%;
+}
+
+.order_section_card_price span i{
+    color: grey;
+    cursor: pointer;
+}
+
+.order_section_card_price small{
+    color: grey;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: monospace;
+}
+
+
+.seemore_section{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 0px 10%;
+    padding-bottom: 5%;
+    background-color: black;
+}
+
+.seemore_section_btn{
+    border: none;
+    font-size: 15px;
+    text-transform: lowercase;
+    font-weight: initial;
+    font-family: poppins;
+    border-radius: 10px;
+    padding: 5px 15px;
+    cursor: pointer;
+    transition: 0.3s linear;
+}
+
+.seemore_section_btn:hover{
+    background-color: rgba(255, 255, 255, 0.171);
+    color: grey;
+    transition: 0.3s linear;
+}

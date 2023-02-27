@@ -1,0 +1,538 @@
+/* 
+    pc screen
+*/
+
+@media (min-width: 760px) {
+    .newsletters{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        padding: 5% 10%;
+        border-top: 1px solid rgba(192, 192, 192, 0.178);
+        border-bottom: 1px solid rgba(192, 192, 192, 0.178);
+    }
+    
+    
+    .newsletters form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .newsletters form h3{
+        text-transform: uppercase;
+        color: white;
+        font-size: 30px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        font-family: monospace,poppins,sans-serif;
+    }
+    
+    .newsletters_paragraph{
+        font-size: 13px;
+        letter-spacing: 1px;
+        font-family: poppins;
+        color: lightgray;
+        padding-bottom: 40px;
+    }
+    
+    .newsletters_paragraph::first-letter{
+        text-transform: uppercase;
+    }
+    
+    
+    .newsletters_inputs{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: transparent;
+        width: 600px;
+        height: 30px;
+    }
+    
+    .newsletters_inputs input{
+        width: 65%;
+        padding-left: 20px;
+        font-size: 15px;
+        color: grey;
+        border: none;
+    }
+    
+    .newsletters_inputs button{
+        width: 34%;
+        text-transform: uppercase;
+        font-size: 17px;
+        font-weight: 500;
+        font-family: poppins,sans-serif;
+        border: none;
+        background-color: transparent;
+        border: 1px solid white;
+        color: white;
+        transition: 0.3s linear;
+    }
+    
+    
+    
+    .footer_brands{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        background-color: black;
+        height: 150px;
+        padding: 0px 5%;
+        flex-wrap: nowrap;
+        overflow: hidden;
+    }
+    
+    .footer_brands_item{
+        /* background-color: rgba(211, 211, 211, 0.089) !important; */
+        background-color: transparent !important;
+        height: 100px;
+        width: 200px;
+        margin: 20px;
+    }
+    
+    .footer_brands_item img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+    
+    
+    .footer{
+        padding: 0px 5%;
+        padding-top: 5%;
+        background-color: black;
+    }
+    
+    
+    .footer_container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: transparent;
+        /* height: 200px; */
+        padding-bottom: 70px;
+    }
+    
+    .footer_logo_contain{
+        display: flex;
+        flex-direction: column;
+        background-color: transparent;
+        width: 300px;
+        height: 100%;
+        padding-bottom: 100px;
+    }
+    
+    .footer_logo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100px;
+        width: 200px;
+    /*     background: url("../../img/AQ-LOGO.png") no-repeat center; 
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat; */
+        /* background-color: rgba(245, 245, 245, 0.377); */
+    }
+    
+    .footer_logo img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+    
+    .footer_logo_Description{
+        font-size: 14px;
+        text-align: left;
+        font-family: poppins, sans-serif;
+        margin-top: 20px;
+        text-transform: capitalize;
+        font-weight: initial;
+        color: rgb(182, 182, 182);
+        padding-right: 40px;
+    }
+    
+    
+    .footer_note_contain{
+        display: flex;
+        flex-direction: row;
+        background-color: transparent;
+        height: 100%;
+        width: 75%;
+    }
+    
+    .foot_note{
+        background-color: transparent;
+        display: flex;
+        flex-direction: column;
+        width: 250px;
+    }
+    
+    .foot_note_title{
+        text-transform: capitalize;
+        font-weight: bold;
+        padding-bottom: 20px;
+        color: white;
+    }
+    
+    .foot_note_info{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .foot_note_info span{
+        margin-bottom: 10px;
+    }
+    
+    .foot_note_info span a{
+        padding-left: 10px;
+        font-size: 13px;
+        text-decoration: none;
+        color: rgb(182, 182, 182);
+        transition: 0.2s linear;
+    }
+    
+    .foot_note_info span a:hover{
+        color: darkslategrey;
+        transition: 0.2s linear;
+    }
+    
+    .foot_note_info_c{
+        text-transform: capitalize;
+    }
+    
+    .footer_socials{
+        display: flex;
+        flex-direction: column;
+        background-color: transparent;
+    }
+    
+    .footer_socials_title{
+        display: block;
+        text-transform: capitalize;
+        font-weight: bold;
+        padding-bottom: 20px;
+        color: white;
+        padding: 10px 0px;
+        padding-top: 20px;
+    }
+    
+    
+    .footer_socials_listings{
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .footer_socials_listings a{
+        text-decoration: none;
+        margin: 0px;
+        margin-right: 20px;
+    }
+    
+    .footer_socials_listings a i{
+        transition: 0.2s linear;
+    }
+    
+    .footer_socials_listings a i:hover{
+        color: darkslategrey;
+        transition: 0.2s linear;
+    }
+    
+    .footer_bottom{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-top: 1px solid rgb(182, 182, 182);
+        background-color: transparent;
+        color: rgb(182, 182, 182);
+        padding: 15px;
+        font-size: 15px;
+        text-transform: capitalize;
+    }
+}
+
+
+
+
+
+
+/* 
+    mobile 
+    screen
+*/
+
+
+
+@media (max-width: 760px) {
+    .newsletters{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        padding: 5% 10%;
+        border-top: 1px solid rgba(192, 192, 192, 0.178);
+        border-bottom: 1px solid rgba(192, 192, 192, 0.178);
+    }
+    
+    
+    .newsletters form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .newsletters form h3{
+        text-transform: uppercase;
+        color: white;
+        font-size: 30px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        font-family: monospace,poppins,sans-serif;
+    }
+    
+    .newsletters_paragraph{
+        font-size: 13px;
+        letter-spacing: 1px;
+        font-family: poppins;
+        color: lightgray;
+        padding: 0px 20%;
+        text-align: center;
+        padding-bottom: 40px;
+    }
+    
+    .newsletters_paragraph::first-letter{
+        text-transform: uppercase;
+    }
+    
+    
+    .newsletters_inputs{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: transparent;
+        width: 100%;
+    }
+    
+    .newsletters_inputs input{
+        width: 65%;
+        padding-left: 20px;
+        font-size: 15px;
+        color: grey;
+        text-align: center;
+        border: none;
+    }
+    
+    .newsletters_inputs button{
+        width: 34%;
+        text-transform: uppercase;
+        font-size: 17px;
+        font-weight: 500;
+        font-family: poppins,sans-serif;
+        border: none;
+        background-color: transparent;
+        border: 1px solid white;
+        color: white;
+        transition: 0.3s linear;
+        margin-top: 20px;
+    }
+    
+    
+    
+    .footer_brands{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        background-color: black;
+        height: 150px;
+        padding: 0px 5%;
+        flex-wrap: nowrap;
+        overflow: hidden;
+    }
+    
+    .footer_brands_item{
+        /* background-color: rgba(211, 211, 211, 0.089) !important; */
+        background-color: transparent !important;
+        height: 100px;
+        width: 200px;
+        margin: 20px;
+    }
+    
+    .footer_brands_item img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+    
+    
+    .footer{
+        padding: 0px 5%;
+        padding-top: 5%;
+        background-color: black;
+    }
+    
+    
+    .footer_container{
+        display: flex;
+        flex-direction: column;
+        background-color: transparent;
+        /* height: 200px; */
+        padding-bottom: 70px;
+    }
+    
+    .footer_logo_contain{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background-color: transparent;
+        width: 100%;
+        height: 100%;
+        padding-bottom: 50px;
+    }
+    
+    .footer_logo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100px;
+        width: 200px;
+    /*     background: url("../../img/AQ-LOGO.png") no-repeat center; 
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat; */
+        /* background-color: rgba(245, 245, 245, 0.377); */
+    }
+    
+    .footer_logo img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+    
+    .footer_logo_Description{
+        font-size: 14px;
+        text-align: left;
+        font-family: poppins, sans-serif;
+        margin-top: 20px;
+        text-transform: capitalize;
+        font-weight: initial;
+        color: rgb(182, 182, 182);
+        padding-right: 40px;
+    }
+    
+    
+    .footer_note_contain{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: transparent;
+        height: 100%;
+        width: 100%;
+    }
+    
+    .foot_note{
+        background-color: transparent;
+        display: flex;
+        flex-direction: column;
+        width: 250px;
+        margin-top: 50px;
+    }
+    
+    .foot_note_title{
+        text-transform: capitalize;
+        font-weight: bold;
+        padding-bottom: 20px;
+        color: white;
+        text-align: center;
+    }
+    
+    .foot_note_info{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .foot_note_info span{
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    
+    .foot_note_info span a{
+        padding-left: 10px;
+        font-size: 13px;
+        text-decoration: none;
+        color: rgb(182, 182, 182);
+        transition: 0.2s linear;
+    }
+    
+    .foot_note_info span a:hover{
+        color: darkslategrey;
+        transition: 0.2s linear;
+    }
+    
+    .foot_note_info_c{
+        text-transform: capitalize;
+    }
+    
+    .footer_socials{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: transparent;
+        margin-top: 60px;
+    }
+    
+    .footer_socials_title{
+        display: block;
+        text-transform: capitalize;
+        font-weight: bold;
+        padding-bottom: 20px;
+        color: white;
+        padding: 10px 0px;
+        padding-top: 20px;
+        text-align: center;
+    }
+    
+    
+    .footer_socials_listings{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    .footer_socials_listings a{
+        text-decoration: none;
+        margin: 0px;
+        margin: 20px;
+    }
+    
+    .footer_socials_listings a i{
+        font-size: 20px;
+        transition: 0.2s linear;
+    }
+    
+    .footer_socials_listings a i:hover{
+        color: darkslategrey;
+        transition: 0.2s linear;
+    }
+    
+    .footer_bottom{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-top: 1px solid rgb(182, 182, 182);
+        background-color: transparent;
+        color: rgb(182, 182, 182);
+        padding: 15px;
+        font-size: 13px;
+        text-transform: capitalize;
+        text-align: center;
+    }
+}

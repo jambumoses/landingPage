@@ -1,0 +1,446 @@
+/* pc screen */
+
+@media (min-width: 1250px) {
+    .brand_banner{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color:  #EDF1D6;
+        height: 100vh;
+    }
+    
+    .brand_banner_note{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 10%;
+        width: 50%;
+        background-color: transparent;
+    }
+    
+    .brand_banner_note h1{
+        font-size: 45px;
+        color: grey;
+    }
+    
+    .brand_banner_note p{
+        background-color: transparent;
+        width: 100%;
+        font-size: 15px;
+        padding-top: 20px;
+        padding-right: 50px;
+    }
+    
+    .brand_banner_note p::first-letter{
+        text-transform: uppercase;
+    }
+    
+    
+    .brand_banner_thumbnail{
+        display: flex;
+        width: 50%;
+        height: 100%;
+        background-color: transparent;
+    }
+    
+    .brand_banner_thumbnail img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .brand_title{
+        margin: 0px;
+        padding-top: 10px;
+        background-color: #EDF1D6;
+    }
+    
+    .brand_title span{
+        display: block;
+        background-color: #EDF1D6;
+        color: grey;
+        font-size: 50px;
+        padding: 0px 8%;
+        text-decoration: underline;
+        text-transform: capitalize;
+    }
+    
+    .brand_section{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: left;
+        align-items: center;
+        background-color: #EDF1D6;
+        padding: 5% 5%;
+        padding-top: 0px;
+    }
+    
+    .brand{
+        display: flex;
+        flex-direction: column;
+        width: 250px;
+        /* height: 300px; */
+        background-color: transparent;
+        padding: 25px;
+        margin: 20px 20px;
+    }
+    
+    .brand_count{
+        display: block;
+        font-size: 50px;
+        font-family: monospace;
+        color: grey;
+    }
+    
+    .brand_name{
+        display: block;
+        text-transform: capitalize;
+        font-size: 30px;
+        font-family: poppins,sans-serif;
+        padding: 2px 0px;
+        color: #1A120B;
+    }
+    
+    .brand_image{
+        display: block;
+        /* background-color: lightgreen; */
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 150px;
+    }
+    
+    .brand_image img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+    
+    .brand_description{
+        background-color: transparent;
+        height: 100px;
+        font-size: 13px;
+        padding: 10px 0px;
+        color: #3C2A21;
+    }
+    
+    .brand a{
+        text-transform: lowercase;
+        font-size: 13px;
+        text-decoration: none;
+        color: darkslategrey;
+        transition: 0.2s linear;
+    }
+    
+    .brand a:hover{
+        color: darkolivegreen;
+        transition: 0.2s linear;
+    }
+}
+
+
+
+
+/*
+    tablet
+    screen
+*/
+
+@media (max-width: 1250px) {
+    .brand_banner{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color:  #EDF1D6;
+        height: 50vh;
+    }
+    
+    .brand_banner_note{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 10%;
+        width: 50%;
+        background-color: transparent;
+    }
+    
+    .brand_banner_note h1{
+        font-size: 45px;
+        color: grey;
+    }
+    
+    .brand_banner_note p{
+        background-color: transparent;
+        width: 100%;
+        font-size: 15px;
+        padding-top: 20px;
+        padding-right: 50px;
+    }
+    
+    .brand_banner_note p::first-letter{
+        text-transform: uppercase;
+    }
+    
+    
+    .brand_banner_thumbnail{
+        display: flex;
+        width: 50%;
+        height: 100%;
+        background-color: transparent;
+    }
+    
+    .brand_banner_thumbnail img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .brand_title{
+        margin: 0px;
+        padding-top: 40px;
+        padding-bottom: 50px;
+        text-align: center;
+        background-color: #E5E5CB;
+    }
+    
+    .brand_title span{
+        display: block;
+        background-color: #E5E5CB;
+        color: grey;
+        font-size: 50px;
+        padding: 0px 8%;
+        text-decoration: none;
+        text-transform: capitalize;
+    }
+    
+    .brand_section{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        background-color: #E5E5CB;
+        padding: 5% 5%;
+        padding-top: 0px;
+    }
+    
+    .brand{
+        display: flex;
+        flex-direction: column;
+        width: 250px;
+        /* height: 300px; */
+        background-color: transparent;
+        padding: 25px;
+        margin: 20px 20px;
+    }
+    
+    .brand_count{
+        display: block;
+        font-size: 50px;
+        font-family: monospace;
+        color: grey;
+        text-align: center;
+    }
+    
+    .brand_name{
+        display: block;
+        text-transform: capitalize;
+        font-size: 30px;
+        font-family: poppins,sans-serif;
+        padding: 2px 0px;
+        color: #1A120B;
+        text-align: center;
+    }
+    
+    .brand_image{
+        display: block;
+        /* background-color: lightgreen; */
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 150px;
+    }
+    
+    .brand_image img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+    
+    .brand_description{
+        background-color: transparent;
+        height: 100px;
+        font-size: 13px;
+        padding: 10px 0px;
+        color: #3C2A21;
+        text-align: center;
+    }
+    
+    .brand a{
+        text-transform: lowercase;
+        font-size: 13px;
+        text-decoration: none;
+        color: darkslategrey;
+        transition: 0.2s linear;
+        text-align: center;
+    }
+    
+    .brand a:hover{
+        color: darkolivegreen;
+        transition: 0.2s linear;
+    }
+}
+
+
+
+
+/* 
+
+    mobile
+*/
+
+@media (max-width: 500px) {
+    .brand_banner{
+        display: flex;
+        flex-direction: column-reverse;
+        background-color:  #EDF1D6;
+        height: 100vh;
+    }
+    
+    .brand_banner_note{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 10%;
+        width: 100%;
+        height: 50vh;
+        background-color: transparent;
+    }
+    
+    .brand_banner_note h1{
+        font-size: 45px;
+        color: grey;
+    }
+    
+    .brand_banner_note p{
+        background-color: transparent;
+        width: 100%;
+        font-size: 15px;
+        padding-top: 20px;
+        padding-right: 50px;
+    }
+    
+    .brand_banner_note p::first-letter{
+        text-transform: uppercase;
+    }
+    
+    
+    .brand_banner_thumbnail{
+        display: flex;
+        width: 100%;
+        height: 50vh;
+        background-color: transparent;
+    }
+    
+    .brand_banner_thumbnail img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .brand_title{
+        margin: 0px;
+        padding-top: 40px;
+        padding-bottom: 50px;
+        text-align: center;
+        background-color: #E5E5CB;
+    }
+    
+    .brand_title span{
+        display: block;
+        background-color: #E5E5CB;
+        color: grey;
+        font-size: 50px;
+        padding: 0px 8%;
+        text-decoration: none;
+        text-transform: capitalize;
+    }
+    
+    .brand_section{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        background-color: #E5E5CB;
+        padding: 5% 5%;
+        padding-top: 0px;
+    }
+    
+    .brand{
+        display: flex;
+        flex-direction: column;
+        width: 250px;
+        /* height: 300px; */
+        background-color: transparent;
+        padding: 25px;
+        margin: 20px 20px;
+    }
+    
+    .brand_count{
+        display: block;
+        font-size: 50px;
+        font-family: monospace;
+        color: grey;
+        text-align: center;
+    }
+    
+    .brand_name{
+        display: block;
+        text-transform: capitalize;
+        font-size: 30px;
+        font-family: poppins,sans-serif;
+        padding: 2px 0px;
+        color: #1A120B;
+        text-align: center;
+    }
+    
+    .brand_image{
+        display: block;
+        /* background-color: lightgreen; */
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 150px;
+    }
+    
+    .brand_image img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+    
+    .brand_description{
+        background-color: transparent;
+        height: 100px;
+        font-size: 13px;
+        padding: 10px 0px;
+        color: #3C2A21;
+        text-align: center;
+    }
+    
+    .brand a{
+        text-transform: lowercase;
+        font-size: 13px;
+        text-decoration: none;
+        color: darkslategrey;
+        transition: 0.2s linear;
+        text-align: center;
+    }
+    
+    .brand a:hover{
+        color: darkolivegreen;
+        transition: 0.2s linear;
+    }
+}

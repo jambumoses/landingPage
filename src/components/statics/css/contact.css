@@ -1,0 +1,708 @@
+/* 
+    pc screen
+*/
+
+@media (min-width: 500px) {
+    .contact_section{
+        /*     padding: 5% 0%;
+            padding-top: 150px; */
+            margin: 0px;
+            background-color: black;
+        }
+        
+        .map_wrapper{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.877);
+            height: 80vh;
+            width: 100%;
+            z-index: 10;
+        }
+        
+        .map_wrapper_heading{
+            display: block;
+            text-align: center;
+            text-transform: capitalize;
+            color: #EDF1D6;
+            font-size: 30px;
+            padding-top: 8%;
+        }
+        
+        .map_wrapper_note{
+            display: block;
+            width: 40%;
+            text-align: center;
+            text-transform: lowercase;
+            font-family: poppins;
+            color: gray;
+            font-size: 13px;
+            padding-top: 20px;
+        }
+        
+        .map_wrapper_note::first-letter{
+            text-transform: uppercase;
+        }
+        
+        .scrolldown{
+            position: absolute;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin-top: -10px;
+            z-index: 20;
+            background-color: transparent;
+        }
+        
+        .scrolldown a{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            text-decoration: none;
+            cursor: pointer;
+            background-color: grey;
+        }
+        
+        .scrolldown a i{
+            color: black;
+        }
+        
+        
+        
+        .mapouter{
+            display: block;
+            position:relative;
+            text-align:right;
+            height: 80vh;
+            /* width:1080px; */
+        }
+        
+        .gmap_canvas{
+            display: block;
+            overflow:hidden;
+            background:none!important;
+            height:100%;
+            width: 100%;
+        }
+        
+        #gmap_canvas{
+            width: 100%;
+            height: 100%;
+        }
+        
+        .getintouch_section{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            background-color: black;
+            /* height: 500px; */
+            padding: 5%;
+        }
+        
+        .getintouch_section_left{
+            display: flex;
+            flex-direction: column;
+            background-color: transparent;
+            width: 40%;
+        }
+        
+        .getintouch_section_left_cont{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            background-color: transparent;
+            height: 80px;
+            margin-bottom: 20px;
+        }
+        
+        .getintouch_section_left_cont i{
+            font-size: 25px;
+            /* font-size: 50px; */
+            padding-right: 30px;
+            color: #A3BB98;
+        }
+        
+        .getintouch_section_left_cont span{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-transform: capitalize;
+            color: #E5E5CB;
+            text-align: left;
+            width: 60%;
+            /* font-size: 18px; */
+            font-size: 16px;
+        }
+        
+        .getintouch_section_left_socials{
+            background-color: transparent;
+        
+        }
+        
+        
+        .getintouch_section_left_socials h3{
+            font-size: 20px;
+            text-transform: uppercase;
+            font-weight: bold;
+            padding-top: 30px;
+            color: #A3BB98;
+        }
+        
+        .getintouch_section_left_socials span{
+            display: block;
+            margin-top: 20px;
+        }
+        
+        .getintouch_section_left_socials span a{
+            text-decoration: none;
+            margin: 0px 10px;
+        }
+        
+        .getintouch_section_left_socials span a i:hover{
+            text-decoration: none;
+            color: #E5E5CB;
+        }
+        
+        .getintouch_section_left_socials span a i{
+            color: #A3BB98;
+        }
+        
+        
+        .getintouch_section_right{
+            background-color: black;
+            width: 60%;
+            padding: 0px 30px;
+        }
+        .getintouch_section_right h3{
+            text-align: center;
+            text-transform: capitalize;
+            font-weight: bold;
+            color: #A3BB98;
+            padding: 10px 0px;
+        }
+        
+        .getintouch_section_right_note{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        
+        .getintouch_section_right_note span{
+            width: 50%;
+            text-align: center;
+            font-size: 14px;
+            font-family: poppins,sans-serif;
+            padding-bottom: 30px;
+            color: gray;
+        }
+        
+        .getintouch_section_right form{
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .getintouch_name_phone{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            background-color: transparent;
+        }
+        
+        .getintouch_name_phone span{
+            width: 45%;
+        }
+        
+        .getintouch_name_phone_input{
+            background-color: #E5E5CB;
+            display: flex;
+            flex-direction: row;
+            padding: 0px 5px;
+            align-items: center;
+            border-radius: 5px;
+            height: 35px;
+        }
+        
+        .getintouch_name_phone_input i{
+            padding: 0px 10px;
+            color: #A3BB98;
+        }
+        
+        .getintouch_name_phone_input input{
+            height: 100%;
+            width: 100%;
+            border: none;
+            outline: none;
+            font-size: 14px;
+            padding-left: 10px;
+            font-family: poppins,sans-serif;
+            background-color: transparent;
+            color: #A3BB98;
+        }
+        
+        .getintouch_email{
+            width: 45%;
+            margin: 15px 0px;
+            background-color: #E5E5CB;
+            display: flex;
+            flex-direction: row;
+            padding: 0px 5px;
+            align-items: center;
+            border-radius: 5px;
+            height: 35px;
+        }
+        
+        .getintouch_email i{
+            padding: 0px 10px;
+            color: #A3BB98;
+        }
+        
+        .getintouch_email input{
+            height: 100%;
+            width: 100%;
+            border: none;
+            outline: none;
+            font-size: 14px;
+            padding-left: 10px;
+            font-family: poppins,sans-serif;
+            background-color: transparent;
+            color: rgb(66, 66, 66);
+        }
+        
+        .getintouch_message{
+            background-color: #E5E5CB;
+            color: rgb(66, 66, 66);
+            font-size: 14px;
+            padding: 20px;
+            font-family: poppins,sans-serif;
+            outline: none;
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+            min-width: 100%;
+            max-width: 100%;
+            height: 140px;
+            min-height: 140px;
+            max-height: 140px;
+            margin-bottom: 50px;
+        }
+        
+        .getintouch_btn{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+        }
+        
+        .getintouch_btn button{
+            font-size: 16px;
+            font-family: poppins,sans-serif;
+            color: #E5E5CB;
+            background-color: #A3BB98;
+            text-transform: capitalize;
+            cursor: pointer;
+            padding: 2px 20px;
+            border-radius: 5px;
+            outline: none;
+            border: none;
+        }
+        
+        
+        
+        
+        
+        .mapouter_show{
+            /* padding: 2% 5%; */
+            display: block;
+            position:relative;
+            text-align:right;
+            height: 50vh;
+            background-color: black;
+            /* width:1080px; */   
+        }
+        
+        
+        .gmap_canvas_show{
+            display: block;
+            overflow:hidden;
+            background:none!important;
+            height:100%;
+            width: 100%;
+        }
+        
+        .gmap_canvas_show{
+            display: block;
+            background-color: black;
+            width: 100%;
+            height: 100%;
+        }
+}
+
+
+
+/* 
+    tablet
+    and
+    mobile 
+    screen
+*/
+
+
+@media (max-width: 1000px) {
+    .contact_section{
+        /*     padding: 5% 0%;
+            padding-top: 150px; */
+            margin: 0px;
+            background-color: black;
+        }
+        
+        .map_wrapper{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.877);
+            height: 80vh;
+            width: 100%;
+            z-index: 10;
+        }
+        
+        .map_wrapper_heading{
+            display: block;
+            text-align: center;
+            text-transform: capitalize;
+            color: #E5E5CB;
+            font-size: 30px;
+            padding-top: 8%;
+        }
+        
+        .map_wrapper_note{
+            display: block;
+            width: 40%;
+            text-align: center;
+            text-transform: lowercase;
+            font-family: poppins;
+            color: gray;
+            font-size: 13px;
+            padding-top: 20px;
+        }
+        
+        .map_wrapper_note::first-letter{
+            text-transform: uppercase;
+        }
+        
+        .scrolldown{
+            position: absolute;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin-top: -10px;
+            z-index: 20;
+            background-color: transparent;
+        }
+        
+        .scrolldown a{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            text-decoration: none;
+            cursor: pointer;
+            background-color: grey;
+        }
+        
+        .scrolldown a i{
+            color: black;
+        }
+        
+        
+        
+        .mapouter{
+            display: block;
+            position:relative;
+            text-align:right;
+            height: 80vh;
+            /* width:1080px; */
+        }
+        
+        .gmap_canvas{
+            display: block;
+            overflow:hidden;
+            background:none!important;
+            height:100%;
+            width: 100%;
+        }
+        
+        #gmap_canvas{
+            width: 100%;
+            height: 100%;
+        }
+        
+        .getintouch_section{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: black;
+            /* height: 500px; */
+            padding: 0px 5%;
+            padding-top: 100px;
+        }
+        
+        .getintouch_section_left{
+            display: flex;
+            flex-direction: column;
+            background-color: transparent;
+            width: 100%;
+        }
+        
+        .getintouch_section_left_cont{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: transparent;
+            height: 80px;
+            margin-bottom: 20px;
+        }
+        
+        .getintouch_section_left_cont i{
+            font-size: 25px;
+            /* font-size: 50px; */
+            padding-left: 0px;
+            color: #A3BB98;
+        }
+        
+        .getintouch_section_left_cont span{
+            display: block;
+            padding-top: 10px;
+            text-transform: capitalize;
+            color: #E5E5CB;
+            text-align: center;
+            width: 60%;
+            /* font-size: 18px; */
+            font-size: 16px;
+            font-family: "poppins";
+        }
+        
+        .getintouch_section_left_socials{
+            background-color: transparent;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 30px;
+            margin-bottom: 40px;
+            border-bottom: 1px solid rgba(192, 192, 192, 0.404);
+        }
+        
+        
+        .getintouch_section_left_socials h3{
+            font-size: 20px;
+            text-transform: uppercase;
+            font-weight: bold;
+            padding-top: 50px;
+            color: #A3BB98;
+        }
+        
+        .getintouch_section_left_socials span{
+            display: block;
+            margin-top: 20px;
+        }
+        
+        .getintouch_section_left_socials span a{
+            text-decoration: none;
+            margin: 0px 10px;
+        }
+        
+        .getintouch_section_left_socials span a i:hover{
+            text-decoration: none;
+            color: #E5E5CB;
+        }
+        
+        .getintouch_section_left_socials span a i{
+            color: #A3BB98;
+        }
+        
+        
+        .getintouch_section_right{
+            background-color: black;
+            width: 100%;
+            padding: 0px 0px;
+        }
+        .getintouch_section_right h3{
+            text-align: center;
+            text-transform: capitalize;
+            font-weight: bold;
+            color: #A3BB98;
+            padding: 40px 0px;
+        }
+        
+        .getintouch_section_right_note{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        
+        .getintouch_section_right_note span{
+            width: 50%;
+            text-align: center;
+            font-size: 14px;
+            font-family: poppins,sans-serif;
+            padding-bottom: 30px;
+            color: gray;
+            margin-bottom: 50px;
+        }
+        
+        .getintouch_section_right form{
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .getintouch_name_phone{
+            display: flex;
+            flex-direction: column;
+            background-color: transparent;
+        }
+        
+        .getintouch_name_phone span{
+            width: 100%;
+            margin-top: 15px;
+        }
+        
+        .getintouch_name_phone_input{
+            background-color: #E5E5CB;
+            display: flex;
+            flex-direction: row;
+            padding: 0px 5px;
+            align-items: center;
+            border-radius: 5px;
+            height: 35px;
+        }
+        
+        .getintouch_name_phone_input i{
+            padding: 0px 10px;
+            color: #A3BB98;
+        }
+        
+        .getintouch_name_phone_input input{
+            height: 100%;
+            width: 100%;
+            border: none;
+            outline: none;
+            font-size: 14px;
+            padding-left: 10px;
+            font-family: poppins,sans-serif;
+            background-color: transparent;
+            color: #A3BB98;
+        }
+        
+        .getintouch_email{
+            width: 60%;
+            margin: 15px 0px;
+            background-color: #E5E5CB;
+            display: flex;
+            flex-direction: row;
+            padding: 0px 5px;
+            align-items: center;
+            border-radius: 5px;
+            height: 35px;
+        }
+        
+        .getintouch_email i{
+            padding: 0px 10px;
+            color: #A3BB98;
+        }
+        
+        .getintouch_email input{
+            height: 100%;
+            width: 100%;
+            border: none;
+            outline: none;
+            font-size: 14px;
+            padding-left: 10px;
+            font-family: poppins,sans-serif;
+            background-color: transparent;
+            color: rgb(66, 66, 66);
+        }
+        
+        .getintouch_message{
+            background-color: #E5E5CB;
+            color: rgb(66, 66, 66);
+            font-size: 14px;
+            padding: 20px;
+            font-family: poppins,sans-serif;
+            outline: none;
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+            min-width: 100%;
+            max-width: 100%;
+            height: 140px;
+            min-height: 140px;
+            max-height: 140px;
+            margin-bottom: 50px;
+        }
+        
+        .getintouch_btn{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        
+        .getintouch_btn button{
+            font-size: 16px;
+            font-family: poppins,sans-serif;
+            color: #E5E5CB;
+            background-color: #A3BB98;
+            text-transform: capitalize;
+            cursor: pointer;
+            padding: 2px 50px;
+            border-radius: 5px;
+            outline: none;
+            border: none;
+        }
+        
+        
+        
+        
+        
+        .mapouter_show{
+            /* padding: 2% 5%; */
+            display: block;
+            position:relative;
+            text-align:right;
+            height: 50vh;
+            background-color: black;
+            /* width:1080px; */
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+        
+        
+        .gmap_canvas_show{
+            display: block;
+            overflow:hidden;
+            background:none!important;
+            height:100%;
+            width: 100%;
+        }
+        
+        .gmap_canvas_show{
+            display: block;
+            background-color: black;
+            width: 100%;
+            height: 100%;
+        }
+}
