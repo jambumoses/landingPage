@@ -32,19 +32,20 @@
 .order_section{
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    align-items: flex-start;
     flex-wrap: wrap;
     background-color: black;
     padding: 5%;
-    padding-top: 10px;
+    padding-top: 50px;
 }
 
 .order_section_card{
     display: flex;
     flex-direction: column;
     background-color: transparent;
-    height: 400px;
-    width: 300px;
+    height: 350px;
+    width: 250px;
     margin: 20px;
 }
 
@@ -54,9 +55,10 @@
     justify-content: center;
     align-items: center;
     height: 70%;
-    background-color: rgb(233, 233, 233);
-    border-radius: 20px;
-    box-sizing: border-box;
+    /* background-color: rgb(233, 233, 233); */
+    background-color: transparent;
+    border-radius: 0px;
+    border: 1px solid rgba(192, 192, 192, 0.233);
 }
 
 .order_section_card_img img{
