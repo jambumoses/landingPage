@@ -7,6 +7,7 @@ import { useSelector,useDispatch } from 'react-redux';
 import { commerce } from './lib/commerce';
 import { constantActions } from '../store/constantSlice';
 
+import $ from 'jquery';
 
 export default function Home() {
 
@@ -28,20 +29,40 @@ export default function Home() {
 
   //console.log(data_)
 
+/*   function RunBannerAnime(){
+    $('.home_banner_container').slideToggle("fast");
+  } */
+
 
   return (
     <>
     <section className='wrapper'>
-        <Carousel prevIcon={<span aria-hidden="true" className="carousel-control-prev-icon" style={{fontSize: "10px"}} />} nextIcon={<span aria-hidden="true" className="carousel-control-next-icon" />} interval={2000} indicators={false} pause={false} style={{backgroundColor:"transparent",height: "100vh",width:"100%"}}>
+        <Carousel prevIcon={<span aria-hidden="true" className="carousel-control-prev-icon" style={{fontSize: "10px"}} />} nextIcon={<span aria-hidden="true" className="carousel-control-next-icon" />} interval={5000} indicators={false} pause={false} style={{backgroundColor:"transparent",height: "100vh",width:"100%"}}>
           <Carousel.Item>
               <section className='carousel_container'>
-              <img src={img}/>
+                <img src={img}/>
+              </section>
+
+              <section className='home_banner_container'>
+                <h3>stationary</h3>
+                <p>
+                  Plastics are a wide range of  Their plasticity makes it possible for plastics ...
+                </p>
+                <button>partner with us</button>
               </section>
           </Carousel.Item>
 
           <Carousel.Item>
               <section className='carousel_container'>
-              <img src={img1}/>
+                <img src={img1}/>
+              </section>
+
+              <section className='home_banner_container'>
+              <h3>foods and beverages</h3>
+                <p>
+                  Plastics are a wide range of synthetic or semi-synthetic materials that use polymers as a main ingredient. Their plasticity makes it possible for plastics ...
+                </p>
+                <button>partner with us</button>
               </section>
           </Carousel.Item>
 
