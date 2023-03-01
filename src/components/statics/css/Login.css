@@ -10,9 +10,9 @@
     background-repeat: no-repeat;
     height: 100vh;
     width: 100%;
-    z-index: 50;
     top: 0px;
     padding-top: 8%;
+    /* z-index: 50; */
 }
 
 .login_blur{
@@ -24,9 +24,9 @@
     background-color: rgba(0, 0, 0, 0.856);
     height: 100vh;
     width: 100%;
-    z-index: 50;
     top: 0px;
     padding-top: 8%;
+    /* z-index: 50; */
 }
 
 

@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react'
-import Nav from './components/Nav'
-import "./components/statics/css/main.css"
-import $ from 'jquery'
+import React, { useEffect, useState } from 'react';
+import Nav from './components/Nav';
+import "./components/statics/css/main.css";
+import $ from 'jquery';
+
 /* import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";

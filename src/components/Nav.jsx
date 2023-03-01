@@ -4,36 +4,117 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import {useSelector} from "react-redux"
 import { commerce } from './lib/commerce';
-
+import $ from 'jquery';
 import {Link} from "react-router-dom";
 
 export default function Nav() {
-    const [cartNo,setCartCount] = useState()
-    const [dropDownCategories,setCategoriesDropDown] = useState([])
+    const [cartNo,setCartCount] = useState(7)
+    const [dropDownCategories,setCategoriesDropDown] = useState([
+      {
+        id: 1,
+        name: "servittes",
+        slug: "servittes",
+      },
+      {
+        id: 2,
+        name: "toilet papper",
+        slug: "toilet paper",
+      },
+      {
+        id: 3,
+        name: "thermal tissues",
+        slug: "thermal tissues",
+      },
+      {
+        id: 4,
+        name: "facial tissues",
+        slug: "facial tissues",
+      },
+      {
+        id: 5,
+        name: "kitchen towels",
+        slug: "kitchen towels",
+      },
+      {
+        id: 6,
+        name: "cleaner bags",
+        slug: "cleaner bags",
+      },
+      {
+        id: 7,
+        name: "sanitizer",
+        slug: "sanitizer",
+      },
+      {
+        id: 8,
+        name: "gabbage bags",
+        slug: "gabbage bags",
+      },
+      {
+      id: 12,
+      name: "servittes",
+      slug: "servittes",
+    },
+    {
+      id: 32,
+      name: "toilet papper",
+      slug: "toilet paper",
+    },
+    {
+      id: 34,
+      name: "thermal tissues",
+      slug: "thermal tissues",
+    },
+    {
+      id: 44,
+      name: "facial tissues",
+      slug: "facial tissues",
+    },
+    {
+      id: 53,
+      name: "kitchen towels",
+      slug: "kitchen towels",
+    },
+    {
+      id: 64,
+      name: "cleaner bags",
+      slug: "cleaner bags",
+    },
+    {
+      id: 734,
+      name: "sanitizer",
+      slug: "sanitizer",
+    },
+    {
+      id: 834,
+      name: "gabbage bags",
+      slug: "gabbage bags",
+    }
+    ])
 
     const constantInfo = useSelector(state=>state.constant.data)
 
-    const getCartCount = async ()=>{
+/*     const getCartCount = async ()=>{
       const {data:cartNumber} = await commerce.cart.retrieve();
       setCartCount(cartNumber)
-    }
+    } */
 
-    const DropDownCategories = async ()=>{
+/*     const DropDownCategories = async ()=>{
       const {data: dropdown} = await commerce.categories.list();
       setCategoriesDropDown(dropdown)
-    }
+    } */
     
     /* update on useEffect */
-    useEffect(()=>{
+/*     useEffect(()=>{
       getCartCount()
       DropDownCategories()
-    },[])
+    },[]) */
 
     /* update every after 1000 seconds */
-    setInterval(() => {
+/*     setInterval(() => {
       getCartCount()
       DropDownCategories()
-    }, 1000);
+    }, 1000); */
   
   
     
@@ -47,6 +128,12 @@ export default function Nav() {
             })}
         </ul>
     )
+  }
+
+
+
+  function MobileMenu(){
+    $('.mobile_menu').slideToggle("medium").css("display","flex")
   }
 
   return (
@@ -95,11 +182,57 @@ export default function Nav() {
             </form>
         </div>
     </nav>
+
+
     <section className='navigation_menu_section'>
       <div className='navigation_menu_section_logo_section'>
-      <img src={require(`${constantInfo.logo.nav}`)} alt="" />
+        <img src={require(`${constantInfo.logo.nav}`)} alt="" />
       </div>
-      <div className='navigation_menu_section_menu_logo'><i className="fa fa-bars"></i></div>
+
+      <div className='navigation_menu_section_menu_logo'>
+        <Link to="/cart" className='a'><i className="fa fa-shopping-cart"></i> <sup style={{color:"grey"}}>{cartNo}</sup></Link>
+        <i onClick={MobileMenu} className="fa fa-bars"></i>
+      </div>
+    </section>
+
+    <section className='mobile_menu'>
+      <ul>
+        <li><Link onClick={MobileMenu} className='a' to="/">home</Link></li>
+        <li><Link onClick={MobileMenu} className='a' to="/categories">categories</Link></li>
+        <li><Link onClick={MobileMenu} className='a' to="/orders">order now</Link></li>
+        <li><Link onClick={MobileMenu} className='a' to="/about">about us</Link></li>
+        <li><Link onClick={MobileMenu} className='a' to="/brands">brands</Link></li>
+        <li><Link onClick={MobileMenu} className='a' to="/contact">contact us</Link></li>
+      </ul>
+
+      <div className='mobile_section_right'>
+        <div className='search_sec'>
+          <form action="" method="post">
+            <input type="search" name="search" placeholder='search here'/>
+            <button type='button'><SearchIcon sx={{color: "pink"}}/></button>
+          </form>
+        </div>
+
+        <div className='icons_sec'>
+          <span className='account'>
+            <span><Link onClick={MobileMenu} to="login" className='a'>login</Link></span>
+            <span><Link onClick={MobileMenu} to="register" className='a'>create account</Link></span>
+          </span>
+
+          <span className='cart_and_socails'>
+            {/* <span className='cart'><Link className='a'><i className="fa fa-shopping-cart"></i> <sup style={{color:"grey"}}>{20}</sup></Link></span> */}
+            <span className='socials'>
+            {
+                                constantInfo.socials.social.map(function(item){
+                                    return(
+                                        <a href={item.link}><i className={item.fontawesome_icon} style={{color:"grey",fontSize: "20px"}}></i></a>
+                                    )
+                                })
+            }
+            </span>
+          </span>
+        </div>
+      </div>
     </section>
     </>
   )

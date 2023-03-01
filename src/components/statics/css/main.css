@@ -9,6 +9,7 @@
 @import url("./contact.css");
 @import url("./Login.css");
 @import url("./cart.css");
+@import url("./nav_mobile.css");
 
 *{
     font-size: 18px;
