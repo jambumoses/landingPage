@@ -1,7 +1,8 @@
 import {React,useEffect} from 'react'
 import Aos from "aos";
 import "aos/dist/aos.css";
-import {useSelector} from "react-redux"
+import {useSelector, useDispatch} from "react-redux"
+import { constantActions } from '../store/constantSlice';
 
 
 /* brand Cards */
@@ -27,6 +28,11 @@ function BrandCard({count,name,image,link,description}){
 
 
 export default function Brands() {
+
+  const dispatch = useDispatch();
+
+  dispatch(constantActions.updatePageTitles("Brands"));
+  dispatch(constantActions.setCurrentPage("brands"));
 
   const constantInfo = useSelector(state=>state.constant.data)
   const BrandHeading = useSelector(state=>state.constant.data.brands.heading)

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Nav from './components/Nav';
 import "./components/statics/css/main.css";
 import $ from 'jquery';
+import { useSelector } from 'react-redux';
 
 /* import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
@@ -65,6 +66,12 @@ export default function App() {
 
   //const dataP = useSelector(state=>state.api.data);
 
+  const currentPage = useSelector(state=>state.constant.currentPage)
+  const PageTitles = useSelector(state=>state.constant.currentPageTitle)
+
+  useEffect(()=>{
+    $("#app-title").text(PageTitles);
+  })
 
   return (
     <>
@@ -90,7 +97,10 @@ export default function App() {
                 {/* 404 */}
                 <Route path='*' component={Home}/>
         </Switch>
-        <Footer/>
+
+        {
+          (currentPage != "home") && <Footer/>
+        }
     </Router>
     </>
   )

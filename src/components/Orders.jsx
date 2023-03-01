@@ -2,11 +2,17 @@ import {React,useState,useEffect} from 'react'
 import orderimg from "./img/chair.png"
 import { commerce } from './lib/commerce';
 import {useSelector,useDispatch} from "react-redux";
+import { constantActions } from '../store/constantSlice';
 
 
 
 
 export default function Orders() {
+
+  const dispatch = useDispatch();
+
+  dispatch(constantActions.updatePageTitles("Order Now"));
+  dispatch(constantActions.setCurrentPage("orders"));
 
   const [orders,setOrders] = useState(
     [

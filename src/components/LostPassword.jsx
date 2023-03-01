@@ -1,7 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { constantActions } from '../store/constantSlice';
+import { useDispatch } from 'react-redux';
 
 export default function LostPassword() {
+
+    const dispatch = useDispatch();
+
+    dispatch(constantActions.updatePageTitles("Lost Password"));
+    dispatch(constantActions.setCurrentPage("lostpassword"));
+
     return (
         <>
         {/* textures */}

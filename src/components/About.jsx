@@ -1,12 +1,14 @@
 import {React,useEffect} from 'react'
 import Aos from "aos";
 import "aos/dist/aos.css";
-import {useSelector} from "react-redux"
+import {useSelector,useDispatch} from "react-redux"
 import member from "./img/member.jpg";
 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
+
+import { constantActions } from '../store/constantSlice';
 
 
 
@@ -49,6 +51,10 @@ function BoardMember({image,name,role}){
 export default function About() {
 
   const constantInfo = useSelector(state=>state.constant.data)
+  const dispatch = useDispatch();
+
+  dispatch(constantActions.updatePageTitles("About Us"));
+  dispatch(constantActions.setCurrentPage("about"));
 
   const settings = {
     dots: true,

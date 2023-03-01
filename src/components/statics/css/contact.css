@@ -53,6 +53,7 @@
             flex-direction: row;
             justify-content: center;
             margin-top: -10px;
+            margin-left: -14px;
             z-index: 20;
             background-color: transparent;
         }

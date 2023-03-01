@@ -1,6 +1,15 @@
 import React from 'react'
+import { useDispatch } from 'react-redux';
+import { constantActions } from '../store/constantSlice';
 
 export default function Cart() {
+
+  const dispatch = useDispatch();
+
+  dispatch(constantActions.updatePageTitles("Cart"));
+  dispatch(constantActions.setCurrentPage("cart"));
+
+
   return (
     <>
       <section className="shopping_cart_section">

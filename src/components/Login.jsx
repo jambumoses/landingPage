@@ -1,7 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { useDispatch } from 'react-redux';
+import { constantActions } from '../store/constantSlice';
 
 export default function Login({setAccountPage}) {
+
+    const dispatch = useDispatch();
+
+    dispatch(constantActions.updatePageTitles("Login"));
+    dispatch(constantActions.setCurrentPage("login"));
+
 
     function RegisterPage(){
         setAccountPage("signup")

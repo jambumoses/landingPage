@@ -3,6 +3,9 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import { commerce } from './lib/commerce';
+import Footer from './Footer';
+import { useDispatch } from 'react-redux';
+import { constantActions } from '../store/constantSlice';
 
 /* 
   name
@@ -15,6 +18,11 @@ import { commerce } from './lib/commerce';
 
 
 export default function Categories() {
+
+  const dispatch = useDispatch();
+
+  dispatch(constantActions.updatePageTitles("Categories"));
+  dispatch(constantActions.setCurrentPage("categories"));
 
   const [Categories,setCategories] = useState([
     {

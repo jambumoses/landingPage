@@ -1,7 +1,13 @@
 import React from 'react'
-import {useSelector} from "react-redux"
+import {useSelector, useDispatch} from "react-redux"
+import { constantActions } from '../store/constantSlice';
 
 export default function Contact() {
+
+  const dispatch = useDispatch();
+
+  dispatch(constantActions.updatePageTitles("Cantact Us"));
+  dispatch(constantActions.setCurrentPage("contact"));
 
   const constantInfo = useSelector(state=>state.constant.data)
 

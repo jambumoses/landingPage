@@ -3,18 +3,25 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import Carousel from 'react-bootstrap/Carousel'
 import img from "../components/img/pic1.jpg";
 import img1 from "../components/img/pic2.jpg";
-import { useSelector } from 'react-redux';
+import { useSelector,useDispatch } from 'react-redux';
 import { commerce } from './lib/commerce';
+import { constantActions } from '../store/constantSlice';
 
 
 export default function Home() {
 
+  const dispatch = useDispatch();
+
+  dispatch(constantActions.updatePageTitles("Home")); // company name here
+  dispatch(constantActions.setCurrentPage("home"));
+  
   const [data_,set_data]=useState([])
 
-  const fu = async ()=>{
+/*   const fu = async ()=>{
     const {data} = await commerce.products.list();
     set_data(data)
-  }/* 
+  } */
+  /* 
   setInterval(() => {
     fu()
   }, 500); */
@@ -25,18 +32,19 @@ export default function Home() {
   return (
     <>
     <section className='wrapper'>
-        <Carousel style={{backgroundColor:"transparent",height: "100vh",width:"100%"}}>
-        <Carousel.Item>
-            <section className='carousel_container'>
-            <img src={img}/>
-            </section>
-        </Carousel.Item>
+        <Carousel prevIcon={<span aria-hidden="true" className="carousel-control-prev-icon" style={{fontSize: "10px"}} />} nextIcon={<span aria-hidden="true" className="carousel-control-next-icon" />} interval={2000} indicators={false} pause={false} style={{backgroundColor:"transparent",height: "100vh",width:"100%"}}>
+          <Carousel.Item>
+              <section className='carousel_container'>
+              <img src={img}/>
+              </section>
+          </Carousel.Item>
 
-        <Carousel.Item>
-            <section className='carousel_container'>
-            <img src={img1}/>
-            </section>
-        </Carousel.Item>
+          <Carousel.Item>
+              <section className='carousel_container'>
+              <img src={img1}/>
+              </section>
+          </Carousel.Item>
+
         </Carousel>
         
     </section>
@@ -82,7 +90,7 @@ export default function Home() {
       </section>
     </section> */}
 
-
+{/* 
     <section className='home_products_section'>
       <div className='home_products_section_item'>
         <a href="http://home">
@@ -148,6 +156,7 @@ export default function Home() {
     <div className='home_products_section_morebtn'>
       <a href=""><button type='button'>see more</button></a>
     </div>
+*/}
     </>
   )
 }
