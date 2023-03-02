@@ -8,7 +8,8 @@ import $ from 'jquery';
 import {Link} from "react-router-dom";
 
 export default function Nav() {
-    const [cartNo,setCartCount] = useState(7)
+    //const [cartNo,setCartCount] = useState(7)
+    const cartNo = useSelector(state=>state.constant.cartData.cartCount)
     const [dropDownCategories,setCategoriesDropDown] = useState([
       {
         id: 1,
@@ -92,29 +93,7 @@ export default function Nav() {
     }
     ])
 
-    const constantInfo = useSelector(state=>state.constant.data)
-
-/*     const getCartCount = async ()=>{
-      const {data:cartNumber} = await commerce.cart.retrieve();
-      setCartCount(cartNumber)
-    } */
-
-/*     const DropDownCategories = async ()=>{
-      const {data: dropdown} = await commerce.categories.list();
-      setCategoriesDropDown(dropdown)
-    } */
-    
-    /* update on useEffect */
-/*     useEffect(()=>{
-      getCartCount()
-      DropDownCategories()
-    },[]) */
-
-    /* update every after 1000 seconds */
-/*     setInterval(() => {
-      getCartCount()
-      DropDownCategories()
-    }, 1000); */
+    const constantInfo = useSelector(state=>state.constant.data);
   
   
     

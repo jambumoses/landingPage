@@ -25,21 +25,6 @@ export default function FooterBrands() {
           )
         })
       }
-{/*         <div className='footer_brands_item'>
-          <img src={require("./img/brand1.png")} alt="" />
-        </div>
-        <div className='footer_brands_item'>
-          <img src={require("./img/brand2.png")} alt="" />
-        </div>
-        <div className='footer_brands_item'>
-          <img src={require("./img/brand3.png")} alt="" />
-        </div>
-        <div className='footer_brands_item'>
-          <img src={require("./img/brand4.png")} alt="" />
-        </div>
-        <div className='footer_brands_item'>
-          <img src={require("./img/brand5.png")} alt="" />
-        </div> */}
     </section>
   )
 }

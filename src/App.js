@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Nav from './components/Nav';
 import "./components/statics/css/main.css";
 import $ from 'jquery';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 /* import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
@@ -23,54 +23,34 @@ import Register from './components/Register';
 import Login from './components/Login';
 import LostPassword from './components/LostPassword';
 import Verification from './components/Verification';
+import { constantActions } from './store/constantSlice';
 
-//import { commerce } from './components/lib/commerce';
-
-//import {useSelector,useDispatch} from "react-redux";
-//import { productActions } from './store/products-slice';
-
-
-/* export async function getStaticProps(){
-  const merchant = await commerce.merchants.about();
-  const {data: categories} = await commerce.categories.list();
-  const {data: products} = await commerce.products.list();
-
-  return{
-    props: {
-      merchant,
-      categories,
-      products
-    }
-  }
-} */
 
 
 
 export default function App() {
-  //const dispatch = useDispatch();
 
-/*   const fetchProducts = async () => {
-    const {data: products} = await commerce.products.list();
-    const {data: categories} = await commerce.categories.list();
-    const merchant = await commerce.merchants.about();
-    
-    dispatch(productActions.getProducts(products));
-    //dispatch(categoriesActions.getCategories(categories));
-    //dispatch(merchantActions.getMerchant(merchant));
-  }
-
-  useEffect(()=>{
-    fetchProducts();
-  },[]) */
-
-
-  //const dataP = useSelector(state=>state.api.data);
+  const dispatch = useDispatch();
 
   const currentPage = useSelector(state=>state.constant.currentPage)
   const PageTitles = useSelector(state=>state.constant.currentPageTitle)
 
+  
+  if(currentPage == 'home'){
+    $('body').css("overflow","hidden");
+  }else{
+    $('body').css({
+      "overflow-x":"hidden",
+      "overflow-y":"auto"
+    });
+  }
+
   useEffect(()=>{
+    // updating page titles
     $("#app-title").text(PageTitles);
+
+    // updating cart data
+    dispatch(constantActions.updateCartCount());
   })
 
   return (

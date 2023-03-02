@@ -2,7 +2,6 @@ import {React,useEffect} from 'react'
 import Aos from "aos";
 import "aos/dist/aos.css";
 import {useSelector,useDispatch} from "react-redux"
-import member from "./img/member.jpg";
 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
@@ -72,7 +71,7 @@ export default function About() {
   return (
     <>
     <section className='about-wrapper'>
-
+      <img src={require('./img/pic3.jpg')} alt="" />
     </section>
 
     <section className='about-container'>

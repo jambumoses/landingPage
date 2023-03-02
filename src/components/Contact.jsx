@@ -1,8 +1,14 @@
-import React from 'react'
+import {React,useEffect} from 'react'
 import {useSelector, useDispatch} from "react-redux"
 import { constantActions } from '../store/constantSlice';
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 export default function Contact() {
+
+  useEffect(()=>{
+    Aos.init({duration: 2000});
+  },[]);
 
   const dispatch = useDispatch();
 
@@ -15,8 +21,8 @@ export default function Contact() {
     <>
     <section className='contact_section'>
       <div className='map_wrapper'>
-        <span className='map_wrapper_heading'>{constantInfo.contactUsPage.BannerHeading}</span>
-        <span className='map_wrapper_note'>{constantInfo.contactUsPage.BannerDescription}</span>
+        <span data-aos="fade-up" className='map_wrapper_heading'>{constantInfo.contactUsPage.BannerHeading}</span>
+        <span data-aos="fade-up" className='map_wrapper_note'>{constantInfo.contactUsPage.BannerDescription}</span>
       </div>
 
       <div className="mapouter">
@@ -26,28 +32,31 @@ export default function Contact() {
         </div>
       </div>
 
-      <div className='scrolldown'>
-        <a href='#bottom'><i className="fa fa-angle-down"></i></a>
+      <div data-aos="fade-down" className='scrolldown'>
+        <a id='scrolldown-animation' href='#bottom'><i className="fa fa-angle-down"></i></a>
       </div>
     </section>
 
     <section className='getintouch_section' id='bottom'>
       <section className='getintouch_section_left'>
         <div className='getintouch_section_left_cont'>
-          <i className={constantInfo.Contact.location.fontawesome_icon}></i> <span> {constantInfo.Contact.location.address}</span>
+          <i data-aos="fade-down" className={constantInfo.Contact.location.fontawesome_icon}></i> 
+          <span data-aos="fade-down"> {constantInfo.Contact.location.address}</span>
         </div>
 
         <div className='getintouch_section_left_cont'>
-          <i className={constantInfo.Contact.phone.fontawesome_icon}></i> <span>{constantInfo.Contact.phone.title}</span>
+          <i data-aos="fade-down" className={constantInfo.Contact.phone.fontawesome_icon}></i> 
+          <span data-aos="fade-down">{constantInfo.Contact.phone.title}</span>
         </div>
 
         <div className='getintouch_section_left_cont'>
-          <i className={constantInfo.Contact.email.fontawesome_icon}></i> <span>{constantInfo.Contact.email.mail}</span>
+          <i data-aos="fade-down" className={constantInfo.Contact.email.fontawesome_icon}></i> 
+          <span data-aos="fade-down">{constantInfo.Contact.email.mail}</span>
         </div>
 
         <div className='getintouch_section_left_socials'>
-          <h3>{constantInfo.socials.heading}</h3>
-          <span>
+          <h3 data-aos="fade-down">{constantInfo.socials.heading}</h3>
+          <span data-aos="fade-left">
             {constantInfo.socials.social.map(function(item){
               return(
                 <a href={item.link}><i className={item.fontawesome_icon}></i></a>
@@ -58,11 +67,11 @@ export default function Contact() {
       </section>
       
       <section className='getintouch_section_right'>
-        <h3>{constantInfo.contactUsPage.contactFormTitle}</h3>
+        <h3 data-aos="fade-up">{constantInfo.contactUsPage.contactFormTitle}</h3>
         <span className='getintouch_section_right_note'>
-          <span>{constantInfo.contactUsPage.contactFormDescription}</span>
+          <span data-aos="fade-up">{constantInfo.contactUsPage.contactFormDescription}</span>
         </span>
-        <form action="" method="post">
+        <form data-aos="fade-up" action="" method="post">
           <div className='getintouch_name_phone'>
             <span className='getintouch_name_phone_input'> <i className="fa fa-user"></i><input type="text" name="name" placeholder='Your Name' /></span>
             <span className='getintouch_name_phone_input'> <i className="fa fa-phone"></i><input type="text" name="phone" placeholder='Your Phone Number' /></span>
@@ -78,7 +87,7 @@ export default function Contact() {
 
     <section>
       <div className="mapouter_show">
-          <div className="gmap_canvas_show">
+          <div data-aos="fade-up" className="gmap_canvas_show">
             <iframe id="gmap_canvas" src={constantInfo.contactUsPage.mapLocation} frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
             </iframe>
           </div>

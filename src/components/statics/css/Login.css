@@ -54,11 +54,12 @@
 .login_blur form{
     display: flex;
     flex-direction: column;
-    background-color: #E5E5CB;
+    background-color: rgb(235, 235, 235);
     width: 400px;
 /*     height: 250px; */
     margin: auto;
     padding: 20px;
+    border-radius: 5px;
 }
 
 .login_head{
@@ -154,4 +155,6 @@
     text-transform: capitalize;
     padding: 2px 15px;
     color: rgb(65, 65, 65);
+    background-color: white;
+    padding: 5px 20px;
 }

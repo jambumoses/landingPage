@@ -10,6 +10,7 @@
 @import url("./Login.css");
 @import url("./cart.css");
 @import url("./nav_mobile.css");
+@import url("./animatons.css");
 
 *{
     font-size: 18px;
@@ -20,7 +21,7 @@
 body{
     margin: 0px;
     padding: 0px;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 /*     opacity: 1;
     transition:all 1s linear; */
 }
@@ -30,6 +31,6 @@ html{
     scroll-behavior: smooth;
 }
 
-button,input,textPath,option,select{
+button,input,textarea,option,select{
     outline: none;
 }

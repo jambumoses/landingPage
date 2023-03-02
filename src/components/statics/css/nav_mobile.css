@@ -173,7 +173,7 @@
         background-color: white;
         padding: 40px 5%;
         padding-top: 100px;
-        width: 100%;
+        width: 100vw;
         z-index: 50;
         display: none;
     }

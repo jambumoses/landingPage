@@ -1,15 +1,26 @@
 import React, { useEffect, useState } from 'react'
+import Aos from "aos";
+import "aos/dist/aos.css";
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Carousel from 'react-bootstrap/Carousel'
-import img from "../components/img/pic1.jpg";
-import img1 from "../components/img/pic2.jpg";
 import { useSelector,useDispatch } from 'react-redux';
-import { commerce } from './lib/commerce';
+
 import { constantActions } from '../store/constantSlice';
 
 import $ from 'jquery';
 
+import img1 from "./img/nobg/50233e9f6cc82aeccb43483efff43623-removebg-preview.png";
+import img2 from "./img/nobg/denny-muller-s9zGsWDiFO4-unsplash-removebg-preview.png";
+import img3 from "./img/nobg/images__1_-removebg-preview.png";
+import img4 from "./img/nobg/malik-skydsgaard-7I8pZ8mtotg-unsplash-removebg-preview.png";
+import img5 from "./img/nobg/images-removebg-preview.png";
+import img6 from "./img/nobg/brands_banner1.png";
+
 export default function Home() {
+
+  useEffect(()=>{
+    Aos.init({duration: 2000});
+  },[]);
 
   const dispatch = useDispatch();
 
@@ -40,29 +51,115 @@ export default function Home() {
         <Carousel prevIcon={<span aria-hidden="true" className="carousel-control-prev-icon" style={{fontSize: "10px"}} />} nextIcon={<span aria-hidden="true" className="carousel-control-next-icon" />} interval={5000} indicators={false} pause={false} style={{backgroundColor:"transparent",height: "100vh",width:"100%"}}>
           <Carousel.Item>
               <section className='carousel_container'>
-                <img src={img}/>
-              </section>
-
-              <section className='home_banner_container'>
-                <h3>stationary</h3>
-                <p>
-                  Plastics are a wide range of  Their plasticity makes it possible for plastics ...
-                </p>
-                <button>partner with us</button>
+                {/* <img src={img}/> */}
+                <div className='note'>
+                  <section className='home_banner_container'>
+                    <h3 data-aos="fade-up">stationary</h3>
+                      <p data-aos="fade-up">
+                        Plastics are a wide range of synthetic or semi-synthetic materials that use polymers as a main ingredient. Their plasticity makes it possible for plastics ...
+                      </p>
+                      <button data-aos="fade-up">partner with us</button>
+                    </section>
+                </div>
+                <div data-aos="fade-up" className='thumbnail_'>
+                  <img src={img1}/>
+                </div>
               </section>
           </Carousel.Item>
 
           <Carousel.Item>
               <section className='carousel_container'>
-                <img src={img1}/>
+                {/* <img src={img}/> */}
+                <div className='note'>
+                  <section className='home_banner_container'>
+                    <h3 data-aos="fade-up">foods and beverages</h3>
+                      <p data-aos="fade-up">
+                        Plastics are a wide range of synthetic or semi-synthetic materials that use polymers as a main ingredient. Their plasticity makes it possible for plastics ...
+                      </p>
+                      <button data-aos="fade-up">partner with us</button>
+                    </section>
+                </div>
+                <div data-aos="fade-up" className='thumbnail_'>
+                  <img src={img2}/>
+                </div>
               </section>
+          </Carousel.Item>
 
-              <section className='home_banner_container'>
-              <h3>foods and beverages</h3>
-                <p>
-                  Plastics are a wide range of synthetic or semi-synthetic materials that use polymers as a main ingredient. Their plasticity makes it possible for plastics ...
-                </p>
-                <button>partner with us</button>
+          
+          <Carousel.Item>
+              <section className='carousel_container'>
+                {/* <img src={img}/> */}
+                <div className='note'>
+                  <section className='home_banner_container'>
+                    <h3 data-aos="fade-up">foods and beverages</h3>
+                      <p data-aos="fade-up">
+                        Plastics are a wide range of synthetic or semi-synthetic materials that use polymers as a main ingredient. Their plasticity makes it possible for plastics ...
+                      </p>
+                      <button data-aos="fade-up">partner with us</button>
+                    </section>
+                </div>
+                <div data-aos="fade-up" className='thumbnail_'>
+                  <img src={img3}/>
+                </div>
+              </section>
+          </Carousel.Item>
+
+
+          
+          <Carousel.Item>
+              <section className='carousel_container'>
+                {/* <img src={img}/> */}
+                <div className='note'>
+                  <section className='home_banner_container'>
+                    <h3 data-aos="fade-up">foods and beverages</h3>
+                      <p data-aos="fade-up">
+                        Plastics are a wide range of synthetic or semi-synthetic materials that use polymers as a main ingredient. Their plasticity makes it possible for plastics ...
+                      </p>
+                      <button data-aos="fade-up">partner with us</button>
+                    </section>
+                </div>
+                <div data-aos="fade-up" className='thumbnail_'>
+                  <img src={img4}/>
+                </div>
+              </section>
+          </Carousel.Item>
+          
+
+          
+          <Carousel.Item>
+              <section className='carousel_container'>
+                {/* <img src={img}/> */}
+                <div className='note'>
+                  <section className='home_banner_container'>
+                    <h3 data-aos="fade-up">foods and beverages</h3>
+                      <p data-aos="fade-up">
+                        Plastics are a wide range of synthetic or semi-synthetic materials that use polymers as a main ingredient. Their plasticity makes it possible for plastics ...
+                      </p>
+                      <button data-aos="fade-up">partner with us</button>
+                    </section>
+                </div>
+                <div data-aos="fade-up" className='thumbnail_'>
+                  <img src={img5}/>
+                </div>
+              </section>
+          </Carousel.Item>
+
+
+          <Carousel.Item>
+              <section className='carousel_container'>
+                {/* <img src={img}/> */}
+                <div className='note'>
+                  <section className='home_banner_container'>
+                    <h3 data-aos="fade-up">foods and beverages</h3>
+                      <p data-aos="fade-up">
+                        Plastics are a wide range of synthetic or semi-synthetic materials that use polymers as a main ingredient. Their plasticity makes it possible for plastics ...
+                      </p>
+                      <button data-aos="fade-up">partner with us</button>
+                    </section>
+                </div>
+                <div className='thumbnail_'>
+                  <img src={img6}/>
+                </div>
               </section>
           </Carousel.Item>
 

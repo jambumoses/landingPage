@@ -1,0 +1,28 @@
+@keyframes scrolldown{
+    0%      {background-color: white; margin-left: 0px; margin-top: 0px; transition: 05s linear;}
+    50%      {background-color: white; margin-left: 0px; margin-top: 50px; transition: 05s ease-in;}
+    100%    {background-color: grey; margin-left: 0px; margin-top: 0px; transition: 05s ease-out;}
+}
+
+@-o-keyframes scrolldown{
+    0%      {background-color: white; margin-left: 0px; margin-top: 0px; transition: 05s linear;}
+    50%      {background-color: white; margin-left: 0px; margin-top: 50px; transition: 05s ease-in;}
+    100%    {background-color: grey; margin-left: 0px; margin-top: 0px; transition: 05s ease-out;}
+}
+
+@-moz-keyframes scrolldown{
+    0%      {background-color: white; margin-left: 0px; margin-top: 0px; transition: 05s linear;}
+    50%      {background-color: white; margin-left: 0px; margin-top: 50px; transition: 05s ease-in;}
+    100%    {background-color: grey; margin-left: 0px; margin-top: 0px; transition: 05s ease-out;}
+}
+
+@-webkit-keyframes scrolldown{
+    0%      {background-color: white; margin-left: 0px; margin-top: 0px; transition: 05s linear;}
+    50%      {background-color: white; margin-left: 0px; margin-top: 50px; transition: 05s ease-in;}
+    100%    {background-color: grey; margin-left: 0px; margin-top: 0px; transition: 05s ease-out;}
+}
+
+#scrolldown-animation{
+    background-color: rgba(160, 160, 160, 0.596);
+    animation: scrolldown 2.5s infinite;
+}

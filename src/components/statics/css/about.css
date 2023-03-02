@@ -4,15 +4,17 @@
 
 @media (min-width: 1007px) {
     .about-wrapper{
-        background: url("../../img/pic3.jpg") no-repeat center;
-        background-position: center;
-        background-size: cover;
-        background-attachment: fixed;
-        background-repeat: no-repeat;
         /* height: 70vh; */
         height: 70vh;
-        z-index: 10;
+        width: 100vw;
+        z-index: 1;
         /* background-color: lightgray; */
+    }
+
+    .about-wrapper img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
     
     .about-container{
@@ -250,16 +252,18 @@
 
 @media (max-width: 1000px) {
     .about-wrapper{
-        background: url("../../img/pic3.jpg") no-repeat center;
-        background-position: center;
-        background-size: cover;
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-        height: 50vh;
-        z-index: 10;
+        height: 70vh;
+        width: 100vw;
+        z-index: 1;
         /* background-color: lightgray; */
     }
     
+    .about-wrapper img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
     .about-container{
         display: flex;
         flex-direction: row;
@@ -502,14 +506,16 @@
 
 @media (max-width: 690px) {
     .about-wrapper{
-        background: url("../../img/pic3.jpg") no-repeat center;
-        background-position: center;
-        background-size: cover;
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-        height: 50vh;
-        z-index: 10;
+        height: 70vh;
+        width: 100vw;
+        z-index: 1;
         /* background-color: lightgray; */
+    }
+
+    .about-wrapper img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
     
     .about-container{

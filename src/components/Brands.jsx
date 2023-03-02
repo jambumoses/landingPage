@@ -45,8 +45,8 @@ export default function Brands() {
     <>
       <section className='brand_banner'>
           <div className='brand_banner_note'>
-            <h1>Our Partners</h1>
-            <p>brands the we work with for the delivery and great product demand and suplies to fuel up the system.</p>
+            <h1 data-aos="fade-right">Our Partners</h1>
+            <p data-aos="fade-right">brands the we work with for the delivery and great product demand and suplies to fuel up the system.</p>
           </div>
 
           <div className='brand_banner_thumbnail'>

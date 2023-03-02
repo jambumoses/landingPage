@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
-//import PhoneIcon from '@mui/icons-material/Phone';
-//import LocationOnIcon from '@mui/icons-material/LocationOn';
-//import EmailIcon from '@mui/icons-material/Email';
+
 import FooterBrands from './FooterBrands';
 import NewsLetters from './NewsLetters';
 
