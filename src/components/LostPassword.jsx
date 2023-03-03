@@ -1,13 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { constantActions } from '../store/constantSlice';
-import { useDispatch } from 'react-redux';
+import {useSelector, useDispatch } from 'react-redux';
 
 export default function LostPassword() {
 
     const dispatch = useDispatch();
+    const companyName = useSelector(state=>state.merchant.CompanyTitle)
 
-    dispatch(constantActions.updatePageTitles("Lost Password"));
+    dispatch(constantActions.updatePageTitles(companyName+" . "+"Lost Password"));
     dispatch(constantActions.setCurrentPage("lostpassword"));
 
     return (

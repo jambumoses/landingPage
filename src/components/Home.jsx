@@ -23,146 +23,41 @@ export default function Home() {
   },[]);
 
   const dispatch = useDispatch();
+  const companyName = useSelector(state=>state.merchant.CompanyTitle)
 
-  dispatch(constantActions.updatePageTitles("Home")); // company name here
+  dispatch(constantActions.updatePageTitles(companyName+" . "+"Home")); // company name here
   dispatch(constantActions.setCurrentPage("home"));
   
-  const [data_,set_data]=useState([])
-
-/*   const fu = async ()=>{
-    const {data} = await commerce.products.list();
-    set_data(data)
-  } */
-  /* 
-  setInterval(() => {
-    fu()
-  }, 500); */
-
-  //console.log(data_)
-
-/*   function RunBannerAnime(){
-    $('.home_banner_container').slideToggle("fast");
-  } */
+  const homeBannerItems = useSelector(state=>state.banner.homeBanner)
+  
 
 
   return (
     <>
     <section className='wrapper'>
         <Carousel prevIcon={<span aria-hidden="true" className="carousel-control-prev-icon" style={{fontSize: "10px"}} />} nextIcon={<span aria-hidden="true" className="carousel-control-next-icon" />} interval={5000} indicators={false} pause={false} style={{backgroundColor:"transparent",height: "100vh",width:"100%"}}>
-          <Carousel.Item>
-              <section className='carousel_container'>
-                {/* <img src={img}/> */}
-                <div className='note'>
-                  <section className='home_banner_container'>
-                    <h3 data-aos="fade-up">stationary</h3>
-                      <p data-aos="fade-up">
-                        Plastics are a wide range of synthetic or semi-synthetic materials that use polymers as a main ingredient. Their plasticity makes it possible for plastics ...
-                      </p>
-                      <button data-aos="fade-up">partner with us</button>
-                    </section>
-                </div>
-                <div data-aos="fade-up" className='thumbnail_'>
-                  <img src={img1}/>
-                </div>
-              </section>
-          </Carousel.Item>
-
-          <Carousel.Item>
-              <section className='carousel_container'>
-                {/* <img src={img}/> */}
-                <div className='note'>
-                  <section className='home_banner_container'>
-                    <h3 data-aos="fade-up">foods and beverages</h3>
-                      <p data-aos="fade-up">
-                        Plastics are a wide range of synthetic or semi-synthetic materials that use polymers as a main ingredient. Their plasticity makes it possible for plastics ...
-                      </p>
-                      <button data-aos="fade-up">partner with us</button>
-                    </section>
-                </div>
-                <div data-aos="fade-up" className='thumbnail_'>
-                  <img src={img2}/>
-                </div>
-              </section>
-          </Carousel.Item>
-
-          
-          <Carousel.Item>
-              <section className='carousel_container'>
-                {/* <img src={img}/> */}
-                <div className='note'>
-                  <section className='home_banner_container'>
-                    <h3 data-aos="fade-up">foods and beverages</h3>
-                      <p data-aos="fade-up">
-                        Plastics are a wide range of synthetic or semi-synthetic materials that use polymers as a main ingredient. Their plasticity makes it possible for plastics ...
-                      </p>
-                      <button data-aos="fade-up">partner with us</button>
-                    </section>
-                </div>
-                <div data-aos="fade-up" className='thumbnail_'>
-                  <img src={img3}/>
-                </div>
-              </section>
-          </Carousel.Item>
-
-
-          
-          <Carousel.Item>
-              <section className='carousel_container'>
-                {/* <img src={img}/> */}
-                <div className='note'>
-                  <section className='home_banner_container'>
-                    <h3 data-aos="fade-up">foods and beverages</h3>
-                      <p data-aos="fade-up">
-                        Plastics are a wide range of synthetic or semi-synthetic materials that use polymers as a main ingredient. Their plasticity makes it possible for plastics ...
-                      </p>
-                      <button data-aos="fade-up">partner with us</button>
-                    </section>
-                </div>
-                <div data-aos="fade-up" className='thumbnail_'>
-                  <img src={img4}/>
-                </div>
-              </section>
-          </Carousel.Item>
-          
-
-          
-          <Carousel.Item>
-              <section className='carousel_container'>
-                {/* <img src={img}/> */}
-                <div className='note'>
-                  <section className='home_banner_container'>
-                    <h3 data-aos="fade-up">foods and beverages</h3>
-                      <p data-aos="fade-up">
-                        Plastics are a wide range of synthetic or semi-synthetic materials that use polymers as a main ingredient. Their plasticity makes it possible for plastics ...
-                      </p>
-                      <button data-aos="fade-up">partner with us</button>
-                    </section>
-                </div>
-                <div data-aos="fade-up" className='thumbnail_'>
-                  <img src={img5}/>
-                </div>
-              </section>
-          </Carousel.Item>
-
-
-          <Carousel.Item>
-              <section className='carousel_container'>
-                {/* <img src={img}/> */}
-                <div className='note'>
-                  <section className='home_banner_container'>
-                    <h3 data-aos="fade-up">foods and beverages</h3>
-                      <p data-aos="fade-up">
-                        Plastics are a wide range of synthetic or semi-synthetic materials that use polymers as a main ingredient. Their plasticity makes it possible for plastics ...
-                      </p>
-                      <button data-aos="fade-up">partner with us</button>
-                    </section>
-                </div>
-                <div className='thumbnail_'>
-                  <img src={img6}/>
-                </div>
-              </section>
-          </Carousel.Item>
-
+          {
+          homeBannerItems.map(function(item){
+            return(
+              <Carousel.Item key={item.id}>
+                <section style={{backgroundColor: item.backgroundColor}} className='carousel_container'>
+                  <div className='note'>
+                    <section className='home_banner_container'>
+                      <h3 data-aos="fade-up" style={{color: item.title.color}}>{item.title.content}</h3>
+                        <p data-aos="fade-up" style={{color: item.description.color}}>
+                          {item.description.content.slice(0,130)} ...
+                        </p>
+                        <button data-aos="fade-up" style={{backgroundColor: item.button.backgroundColor, color: item.button.color}}>{item.button.name}</button>
+                      </section>
+                  </div>
+                  <div data-aos="fade-up" className='thumbnail_'>
+                    <img src={item.image.url} alt=""/>
+                  </div>
+                </section>
+              </Carousel.Item>
+            )
+          })
+          }
         </Carousel>
         
     </section>

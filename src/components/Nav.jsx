@@ -9,102 +9,25 @@ import {Link} from "react-router-dom";
 
 export default function Nav() {
     //const [cartNo,setCartCount] = useState(7)
-    const cartNo = useSelector(state=>state.constant.cartData.cartCount)
-    const [dropDownCategories,setCategoriesDropDown] = useState([
-      {
-        id: 1,
-        name: "servittes",
-        slug: "servittes",
-      },
-      {
-        id: 2,
-        name: "toilet papper",
-        slug: "toilet paper",
-      },
-      {
-        id: 3,
-        name: "thermal tissues",
-        slug: "thermal tissues",
-      },
-      {
-        id: 4,
-        name: "facial tissues",
-        slug: "facial tissues",
-      },
-      {
-        id: 5,
-        name: "kitchen towels",
-        slug: "kitchen towels",
-      },
-      {
-        id: 6,
-        name: "cleaner bags",
-        slug: "cleaner bags",
-      },
-      {
-        id: 7,
-        name: "sanitizer",
-        slug: "sanitizer",
-      },
-      {
-        id: 8,
-        name: "gabbage bags",
-        slug: "gabbage bags",
-      },
-      {
-      id: 12,
-      name: "servittes",
-      slug: "servittes",
-    },
-    {
-      id: 32,
-      name: "toilet papper",
-      slug: "toilet paper",
-    },
-    {
-      id: 34,
-      name: "thermal tissues",
-      slug: "thermal tissues",
-    },
-    {
-      id: 44,
-      name: "facial tissues",
-      slug: "facial tissues",
-    },
-    {
-      id: 53,
-      name: "kitchen towels",
-      slug: "kitchen towels",
-    },
-    {
-      id: 64,
-      name: "cleaner bags",
-      slug: "cleaner bags",
-    },
-    {
-      id: 734,
-      name: "sanitizer",
-      slug: "sanitizer",
-    },
-    {
-      id: 834,
-      name: "gabbage bags",
-      slug: "gabbage bags",
-    }
-    ])
+    const cartNo = useSelector(state=>state.cart.cartData.cartCount)
+    const categoriesData = useSelector(state=>state.categories.categories)
 
-    const constantInfo = useSelector(state=>state.constant.data);
-  
+    const merchantData = useSelector(state=>state.merchant);
+
+
   
     
   function NavDropDown({data}){
     return(
         <ul className='category_dropdown'>
-            {data.map(function(item){
+            {
+            data.map(function(item){
+            
                 return(
-                    <li className='border-d'><a href=''>{item.name}</a></li>
+                    <li key={item.id} className='border-d'><a href=''>{item.category}</a></li>
                 )
-            })}
+            })
+            }
         </ul>
     )
   }
@@ -120,7 +43,7 @@ export default function Nav() {
 
     <nav className='navigation'>
         <div className='navigation_logo_section'>
-            <img src={require(`${constantInfo.logo.nav}`)} alt="" />
+            <img src={require(`${merchantData.logo.nav}`)} alt="" />
         </div>
 
         <nav className='navigation_nav'>
@@ -130,7 +53,9 @@ export default function Nav() {
                 <Link to="/categories" className='nav-link category_drop_cont'>
                     <span className='category_drop nav-link'>categories <i style={{color:"gray",fontSize: "14px"}} className="fa fa-angle-down"></i></span>
                     
-                    {(dropDownCategories.length > 0) && <NavDropDown data={dropDownCategories}/>}
+                    {
+                    (categoriesData.length > 0) && <NavDropDown data={categoriesData}/>
+                    }
                 
                 </Link>
                 <Link to="/orders" className='nav-link'>order now</Link>
@@ -165,7 +90,7 @@ export default function Nav() {
 
     <section className='navigation_menu_section'>
       <div className='navigation_menu_section_logo_section'>
-        <img src={require(`${constantInfo.logo.nav}`)} alt="" />
+        <img src={require(`${merchantData.logo.nav}`)} alt="" />
       </div>
 
       <div className='navigation_menu_section_menu_logo'>
@@ -202,7 +127,7 @@ export default function Nav() {
             {/* <span className='cart'><Link className='a'><i className="fa fa-shopping-cart"></i> <sup style={{color:"grey"}}>{20}</sup></Link></span> */}
             <span className='socials'>
             {
-                                constantInfo.socials.social.map(function(item){
+                                merchantData.socials.social.map(function(item){
                                     return(
                                         <a href={item.link}><i className={item.fontawesome_icon} style={{color:"grey",fontSize: "20px"}}></i></a>
                                     )

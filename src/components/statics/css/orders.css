@@ -1,6 +1,7 @@
 .filterbar{
     display: flex;
     flex-direction: row;
+    justify-content: flex-end;
     color: white;
     background-color: black;
     padding: 0px 10%;
@@ -44,7 +45,7 @@
     display: flex;
     flex-direction: column;
     background-color: transparent;
-    height: 350px;
+    height: auto;
     width: 250px;
     margin: 50px;
 }
@@ -71,19 +72,17 @@
 }
 
 .order_section_card_title{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    display: block;
+    text-align: center;
     background-color: transparent;
     height: 10%;
-    padding-left: 5px;
+    padding-bottom: 5px;
 }
 
 .order_section_card_title a{
     text-transform: capitalize;
     color: rgb(70, 70, 70);
-    color: white;
+    color: lightgray;
     text-decoration: none;
     transition: 0.2s linear;
 }
@@ -93,6 +92,13 @@
     color: grey;
     transition: 0.2s linear;
 }
+
+.order_section_card_title span{
+    font-size: 13px;
+    line-height: 10px;
+    color: grey;
+}
+
 .order_section_card_price{
     display: flex;
     flex-direction: column;
@@ -102,7 +108,7 @@
     color: white;
     font-weight: bold;
     font-family: poppins;
-    height: 10%;
+    height: auto;
     padding: 0px 5px;
 }
 
@@ -114,7 +120,7 @@
     color: white;
     font-weight: bold;
     font-family: poppins;
-    height: 100%;
+    padding: 5px 0px;
 }
 
 .order_section_card_price span i{

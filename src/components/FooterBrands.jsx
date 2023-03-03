@@ -4,7 +4,7 @@ import {useSelector} from "react-redux"
 function FooterBrandItem({image}){
   return(
     <div className='footer_brands_item'>
-      <img src={require(`${image}`)} alt="" />
+      <img src={image} alt="" />
     </div>    
   )
 }
@@ -15,13 +15,14 @@ function FooterBrandItem({image}){
 export default function FooterBrands() {
   
   const constantInfo = useSelector(state=>state.constant.data)
+  const brandsData = useSelector(state=>state.brands.brands.brands)
   
   return (
     <section className='footer_brands'>
       {
-        constantInfo.Footerbrands.map(function(item){
+        brandsData.slice(0,4).map(function(item){
           return(
-            <FooterBrandItem key={item.count} image={item.image}/>
+            <FooterBrandItem key={item.id} image={item.image}/>
           )
         })
       }

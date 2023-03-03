@@ -49,10 +49,13 @@ function BoardMember({image,name,role}){
 
 export default function About() {
 
-  const constantInfo = useSelector(state=>state.constant.data)
+  const merchantData = useSelector(state=>state.merchant)
+  //const constantInfo = useSelector(state=>state.constant.data)
   const dispatch = useDispatch();
+  const companyName = useSelector(state=>state.merchant.CompanyTitle)
 
-  dispatch(constantActions.updatePageTitles("About Us"));
+  // page titles
+  dispatch(constantActions.updatePageTitles(companyName+" . "+"About Us"));
   dispatch(constantActions.setCurrentPage("about"));
 
   const settings = {
@@ -67,11 +70,13 @@ export default function About() {
       Aos.init({duration: 2000});
   },[]);
 
+  const aboutBannerImage = useSelector(state=>state.banner.aboutBanner.image.url)
+
 
   return (
     <>
     <section className='about-wrapper'>
-      <img src={require('./img/pic3.jpg')} alt="" />
+      <img src={aboutBannerImage} alt="" />
     </section>
 
     <section className='about-container'>
@@ -79,14 +84,14 @@ export default function About() {
         <div className='about-container_1_mission'>
           <h2 data-aos="fade-right">Mission</h2>
           <span  data-aos="fade-up">
-          {constantInfo.aboutus.mission}
+          {merchantData.aboutus.mission}
           </span>
         </div>
 
         <div className='about-container_1_vision'>
           <h2 data-aos="fade-right">Vision</h2>
           <span data-aos="fade-up">
-          {constantInfo.aboutus.vision}
+          {merchantData.aboutus.vision}
           </span>
         </div>
 
@@ -98,7 +103,7 @@ export default function About() {
       
       <section className='about-container_2'>
 
-        {constantInfo.aboutus.notes.map(function(item){
+        {merchantData.aboutus.notes.map(function(item){
           return(
             <p data-aos="fade-up">
               {item}
@@ -110,10 +115,10 @@ export default function About() {
     </section>
 
     <section className='members_section'>
-      <h1 data-aos="fade-up" className='members_section_main_title'>{constantInfo.aboutus.membership.board.title}</h1>
+      <h1 data-aos="fade-up" className='members_section_main_title'>{merchantData.aboutus.membership.board.title}</h1>
       <div className='members_section_member_container_main'>
         {
-          constantInfo.aboutus.membership.board.members.map(function(item){
+          merchantData.aboutus.membership.board.members.map(function(item){
             return(
               <BoardMember image={item.image} name={item.name} role={item.role}/>
             )
@@ -124,12 +129,12 @@ export default function About() {
 
     
     <section className='members_section members_section22'>
-      <h1 data-aos="fade-up" className='members_section_main_title'>{constantInfo.aboutus.membership.managementTeam.title}</h1>
+      <h1 data-aos="fade-up" className='members_section_main_title'>{merchantData.aboutus.membership.managementTeam.title}</h1>
       <div data-aos="fade-up" className='members_section_member_container'>
       
         <Slider {...settings}>
           {
-           constantInfo.aboutus.membership.managementTeam.members.map(function(item){
+           merchantData.aboutus.membership.managementTeam.members.map(function(item){
              return(
               <ManagementTeam image={item.image} name={item.name} role={item.role}/>
              )

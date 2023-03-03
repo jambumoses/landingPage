@@ -1,12 +1,13 @@
 const CONSTANTS = {
     /* company */
-    CompanyTitle: "",
+    CompanyTitle: "jambu.com",
     CompanyDescription: "the number 1 distributor of fast moving consumer goods",
     
     footerCompanyTitle: "african queen No1 Distributor LTD",
     
     logo:{
         nav:"./img/AQ-LOGO.png",
+        browserTab: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuSfZN56LQBpMMY6lPQs3t5Xhrn-sai5BQyg&usqp=CAU",
         footer :"./img/AQ-LOGO.png",
     },
 
@@ -41,104 +42,6 @@ const CONSTANTS = {
         }
     },
 
-    /* brands */
-    brands:{
-        heading: "Brands",
-        brands:[
-            {
-                count: "01",
-                name:"gorillos",
-                description:"To efficiently distribute quality products that delight customers and deliver sustainable stakeholder value",
-                image:"./img/Picture4.jpg",
-                link:""
-            },
-            {
-                count: "02",
-                name:"BIC",
-                description:"To efficiently distribute quality products that delight customers and deliver sustainable stakeholder value",
-                image:"./img/brand5.png",
-                link:""
-            },
-            {
-                count: "03",
-                name:"keian",
-                description:"To efficiently distribute quality products that delight customers and deliver sustainable stakeholder value",
-                image:"./img/brand1.png",
-                link:""
-            },
-            {
-                count: "04",
-                name:"trident industries LTD",
-                description:"To efficiently distribute quality products that delight customers and deliver sustainable stakeholder value",
-                image:"./img/brand2.png",
-                link:""
-            },
-            {
-                count: "05",
-                name:"suntory",
-                description:"To efficiently distribute quality products that delight customers and deliver sustainable stakeholder value",
-                image:"./img/brand3.png",
-                link:""
-            },
-            {
-                count: "06",
-                name:"proctor & allan",
-                description:"To efficiently distribute quality products that delight customers and deliver sustainable stakeholder value",
-                image:"./img/brand4.png",
-                link:""
-            },
-            {
-                count: "07",
-                name:"KETEPA",
-                description:"To efficiently distribute quality products that delight customers and deliver sustainable stakeholder value",
-                image:"./img/brand6.jpg",
-                link:""
-            },
-            {
-                count: "08",
-                name:"GSK",
-                description:"To efficiently distribute quality products that delight customers and deliver sustainable stakeholder value",
-                image:"./img/brand8.png",
-                link:""
-            },
-            {
-                count: "09",
-                name:"HAYAT",
-                description:"To efficiently distribute quality products that delight customers and deliver sustainable stakeholder value",
-                image:"./img/brand9.jpg",
-                link:""
-            },
-            {
-                count: "10",
-                name:"cussons",
-                description:"To efficiently distribute quality products that delight customers and deliver sustainable stakeholder value",
-                image:"./img/brand11.png",
-                link:""
-            },
-            {
-                count: "11",
-                name:"HACO",
-                description:"To efficiently distribute quality products that delight customers and deliver sustainable stakeholder value",
-                image:"./img/brand12.png",
-                link:""
-            },
-            {
-                count: "12",
-                name:"Kim fay",
-                description:"To efficiently distribute quality products that delight customers and deliver sustainable stakeholder value",
-                image:"./img/brand10.png",
-                link:""
-            },
-            {
-                count: "13",
-                name:"truFood",
-                description:"To efficiently distribute quality products that delight customers and deliver sustainable stakeholder value",
-                image:"./img/brand17.png",
-                link:""
-            },
-        ]
-    },
-
     /* contact us page */
     contactUsPage:{
         mapLocation:"https://maps.google.com/maps?q=african%20queen&t=&z=11&ie=UTF8&iwloc=&output=embed",
@@ -155,76 +58,46 @@ const CONSTANTS = {
         placeHolder:"Enter Your Email",
         buttonValue:"subscribe"
     },
-
     /* navigation */
     navigation:[
         {
+            id: 1,
             name:"home",
             link:"/"
         },
         {
+            id: 2,
             name:"categories",
             link:"/categories"
         },
         {
+            id: 3,
             name:"order now",
             link:"/orders"
         },
         {
+            id: 4,
             name:"about us",
             link:"/about"
         },
         {
+            id: 5,
             name:"brands",
             link:"/brands"
         },
         {
+            id: 6,
             name:"contact us",
             link:"/contact"
         },
         {
+            id: 7,
             name:"accounts",
             link:"/accounts"
         }
     ],
 
-    Footerbrands:[
-        {
-            count: "01",
-            name:"gorillos",
-            description:"To efficiently distribute quality products that delight customers and deliver sustainable stakeholder value",
-            image:"./img/Picture4.jpg",
-            link:""
-        },
-        {
-            count: "02",
-            name:"BIC",
-            description:"To efficiently distribute quality products that delight customers and deliver sustainable stakeholder value",
-            image:"./img/brand5.png",
-            link:""
-        },
-        {
-            count: "03",
-            name:"keian",
-            description:"To efficiently distribute quality products that delight customers and deliver sustainable stakeholder value",
-            image:"./img/brand1.png",
-            link:""
-        },
-        {
-            count: "04",
-            name:"trident industries LTD",
-            description:"To efficiently distribute quality products that delight customers and deliver sustainable stakeholder value",
-            image:"./img/brand2.png",
-            link:""
-        },
-        {
-            count: "05",
-            name:"suntory",
-            description:"To efficiently distribute quality products that delight customers and deliver sustainable stakeholder value",
-            image:"./img/brand3.png",
-            link:""
-        }
-    ],
+
 
 
 
@@ -253,21 +126,25 @@ const CONSTANTS = {
         heading: "follow us",
         social:[
         {
+            id: 1,
             title: "facebook",
             fontawesome_icon: "fab fa-facebook",
             link: "https://www.facebook.com"
         },
         {
+            id: 2,
             title: "linkedin",
             fontawesome_icon: "fab fa-linkedin",
             link: "https://www.linkedin.com"
         },
         {
+            id: 3,
             title: "instagram",
             fontawesome_icon: "fab fa-instagram",
             link: "https://www.instagram.com"
         },
         {
+            id: 4,
             title: "twitter",
             fontawesome_icon: "fab fa-twitter",
             link: "https://www.twitter.com"

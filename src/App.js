@@ -24,6 +24,7 @@ import Login from './components/Login';
 import LostPassword from './components/LostPassword';
 import Verification from './components/Verification';
 import { constantActions } from './store/constantSlice';
+import { cartActions } from './store/CartSlice';
 
 
 
@@ -32,10 +33,12 @@ export default function App() {
 
   const dispatch = useDispatch();
 
+  const browserIcons = useSelector(state=>state.merchant.logo.browserTab)
   const currentPage = useSelector(state=>state.constant.currentPage)
   const PageTitles = useSelector(state=>state.constant.currentPageTitle)
 
   
+
   if(currentPage == 'home'){
     $('body').css("overflow","hidden");
   }else{
@@ -46,11 +49,14 @@ export default function App() {
   }
 
   useEffect(()=>{
+    /* Browser icons */
+    $("#browser-icons").attr("href", browserIcons);
+
     // updating page titles
     $("#app-title").text(PageTitles);
 
     // updating cart data
-    dispatch(constantActions.updateCartCount());
+    dispatch(cartActions.updateCartCount());
   })
 
   return (

@@ -1,13 +1,23 @@
 import { configureStore } from "@reduxjs/toolkit";
+
+import bannerSlice from "./BannerSlice";
+import BrandsSlice from "./BrandsSlice";
+import cartSlice from "./CartSlice";
+import productSlice from "./productSlice";
+import categoriesSlice from "./categoriesSlice";
+import merchantSlice from "./merchantSlice";
+
 import constantSlice from "./constantSlice";
-import merchantSlice from "./merchant-slice";
-import productSlice from "./products-slice";
 
 
 const store = configureStore({
     reducer: {
-        api : productSlice.reducer,
         constant : constantSlice.reducer,
+        cart: cartSlice.reducer,
+        banner: bannerSlice.reducer,
+        brands: BrandsSlice.reducer,
+        products: productSlice.reducer,
+        categories: categoriesSlice.reducer,
         merchant : merchantSlice.reducer,
     },
 });

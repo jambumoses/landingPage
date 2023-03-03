@@ -3,6 +3,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import { useDispatch,useSelector } from 'react-redux';
 import { constantActions } from '../store/constantSlice';
+import { cartActions } from '../store/CartSlice';
 
 export default function Cart() {
 
@@ -11,13 +12,14 @@ export default function Cart() {
   },[]);
 
   const dispatch = useDispatch();
+  const companyName = useSelector(state=>state.merchant.CompanyTitle)
 
-  dispatch(constantActions.updatePageTitles("Cart"));
+  dispatch(constantActions.updatePageTitles(companyName+" . "+"Cart"));
   dispatch(constantActions.setCurrentPage("cart"));
 
-  const cartData = useSelector(state=>state.constant.cartData.cartItems);
-  const cartSubTotal = useSelector(state=>state.constant.cartData.totalCartPrice);
-  const shipping = useSelector(state=>state.constant.cartData.shippingFree);
+  const cartData = useSelector(state=>state.cart.cartData.cartItems);
+  const cartSubTotal = useSelector(state=>state.cart.cartData.totalCartPrice);
+  const shipping = useSelector(state=>state.cart.cartData.shippingFree);
 
 
   /* useEffect(()=>{
@@ -28,24 +30,24 @@ export default function Cart() {
 
     /* add plus one quantity */
     function addFromCart(){
-      dispatch(constantActions.addFromCart(data.id));
-      dispatch(constantActions.updateSubtotal());
+      dispatch(cartActions.addFromCart(data.id));
+      dispatch(cartActions.updateSubtotal());
       /* dispatch(constantActions.cartTotal()); */
     }
 
     /* reduces minus one quantity */
     function reduceFromCart(){
-      dispatch(constantActions.reduceFromCart(data.id));
-      dispatch(constantActions.updateSubtotal());
+      dispatch(cartActions.reduceFromCart(data.id));
+      dispatch(cartActions.updateSubtotal());
       /* dispatch(constantActions.cartTotal()); */
     }
 
     /* removes product from cart */
     function removeFromCart(){
-      dispatch(constantActions.removeFromCart(data.id));
+      dispatch(cartActions.removeFromCart(data.id));
         
       // updating cart data
-      dispatch(constantActions.updateCartCount());
+      dispatch(cartActions.updateCartCount());
       /* dispatch(constantActions.cartTotal()); */
     }
 

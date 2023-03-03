@@ -16,7 +16,7 @@ function BrandCard({count,name,image,link,description}){
         <img src={image} alt={name} />
       </span>
       <span className='brand_description'>
-        {description}
+        {description.slice(0,100)} ...
       </span>
       <a href={link}>see more</a>
     </div>
@@ -30,12 +30,18 @@ function BrandCard({count,name,image,link,description}){
 export default function Brands() {
 
   const dispatch = useDispatch();
+  const companyName = useSelector(state=>state.merchant.CompanyTitle)
 
-  dispatch(constantActions.updatePageTitles("Brands"));
+  dispatch(constantActions.updatePageTitles(companyName+" . "+"Brands"));
   dispatch(constantActions.setCurrentPage("brands"));
 
-  const constantInfo = useSelector(state=>state.constant.data)
-  const BrandHeading = useSelector(state=>state.constant.data.brands.heading)
+  //  banner information
+  const BrandBanner = useSelector(state=>state.banner.brandsBanner);
+
+  
+  // brands data
+  const BrandsData = useSelector(state=>state.brands.brands)
+
 
   useEffect(()=>{
     Aos.init({duration: 2000});
@@ -43,10 +49,10 @@ export default function Brands() {
 
   return (
     <>
-      <section className='brand_banner'>
+      <section className='brand_banner' style={{backgroundColor: BrandBanner.backgroundColor}}>
           <div className='brand_banner_note'>
-            <h1 data-aos="fade-right">Our Partners</h1>
-            <p data-aos="fade-right">brands the we work with for the delivery and great product demand and suplies to fuel up the system.</p>
+            <h1 data-aos="fade-right" style={{color: BrandBanner.title.color}}>{BrandBanner.title.content}</h1>
+            <p data-aos="fade-right" style={{color: BrandBanner.description.color}}>{BrandBanner.description.content}</p>
           </div>
 
           <div className='brand_banner_thumbnail'>
@@ -54,14 +60,16 @@ export default function Brands() {
           </div>
       </section>
 
+      {/* brand heading */}
       <div className='brand_title'>
-        <span data-aos="fade-up"> {BrandHeading}</span>
+        <span data-aos="fade-up"> {BrandsData.heading}</span>
       </div>
 
+      {/* brand listing */}
       <section className='brand_section'>
-        {constantInfo.brands.brands.map(function(item){
+        {BrandsData.brands.map(function(item){
           return(
-            <BrandCard key={item.count} count={item.count} name={item.name} description={item.description} image={item.image} link={item.link}/>
+            <BrandCard key={item.id} count={item.count} name={item.name} description={item.description} image={item.image} link={item.link}/>
           )
         })}
       </section>

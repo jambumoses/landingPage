@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
+import {useSelector, useDispatch } from 'react-redux';
 import { constantActions } from '../store/constantSlice';
 
 export default function Verification({type}) {
 
     const dispatch = useDispatch();
+    const companyName = useSelector(state=>state.merchant.CompanyTitle)
 
-    dispatch(constantActions.updatePageTitles("Verification"));
+    dispatch(constantActions.updatePageTitles(companyName+" . "+"Verification"));
     dispatch(constantActions.setCurrentPage("verification"));
 
     const [verificationType,changeVerification] = useState("resetpassword");/* its carries the type variable and the feed of verification */

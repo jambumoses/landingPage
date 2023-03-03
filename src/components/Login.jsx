@@ -1,13 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { useDispatch } from 'react-redux';
+import {useSelector, useDispatch } from 'react-redux';
 import { constantActions } from '../store/constantSlice';
 
 export default function Login({setAccountPage}) {
 
     const dispatch = useDispatch();
+    const companyName = useSelector(state=>state.merchant.CompanyTitle)
 
-    dispatch(constantActions.updatePageTitles("Login"));
+    dispatch(constantActions.updatePageTitles(companyName+" . "+"Login"));
     dispatch(constantActions.setCurrentPage("login"));
 
 
