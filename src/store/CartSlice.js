@@ -14,7 +14,32 @@ const cartSlice = createSlice({
                 raw: 0,
                 formatted_with_symbol : "$ 120"
             },
-            cartItems : [] // end of cart items
+            cartItems : [
+
+                {
+                    id: 6,
+                    name: "toilet paper",
+                    category: "paper",
+                    slug: "toilet paper",
+                    description: "Plastics Are A Wide Range Of Synthetic Or Semi-Synthetic . Their Plasticity ...",
+                    quantity: 1,
+                    images: {
+                      url: "",
+                      detailed_images:[
+                        {id: 1, alt: "", url: ""},
+                        {id: 2, alt: "", url: ""}
+                      ]
+                    },
+                    initialPrice: {
+                      raw: 200,
+                      formatted_with_symbol : "$ 200"
+                    },
+                    subtotal: {
+                      raw: 500,
+                      formatted_with_symbol : "$ 500"
+                    }
+                  },
+            ] // end of cart items
         }
     },
     reducers:{

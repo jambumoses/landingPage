@@ -39,7 +39,13 @@ export default function Orders() {
 
   const [filterByCategoriesSearch,setfilterByCategoriesSearch] = useState('all')
 
+  // see more button
+  const [seeMoreButton,setSeeMoreButton] = useState(12);
 
+  function seeMoreButtonFnc(){
+    let newLimit = seeMoreButton + 12;
+    setSeeMoreButton(newLimit)
+  }
 
   /* order item */
 function OrderItem({data}){
@@ -115,7 +121,7 @@ function FilteredProducts({filt,products}){
 
     <section className='order_section'>
       {
-        products && (filterByCategoriesSearch == "all") ? products.map(function(filteredProduct){
+        products && (filterByCategoriesSearch == "all") ? products.slice(0,seeMoreButton).map(function(filteredProduct){
         return(<OrderItem key={filteredProduct.id} data={filteredProduct}/>)
         }) : (filterByCategoriesSearch != "all") ?
          products.filter(product => product.slug == filterByCategoriesSearch).map(function(filteredProduct){
@@ -132,9 +138,12 @@ function FilteredProducts({filt,products}){
       }
     </section>
     
-{/*     <div className='seemore_section'>
-      <button type='button' className='seemore_section_btn'>see more</button>
-    </div> */}
+    {
+      (seeMoreButton > products.length)? null:
+      <div className='seemore_section'>
+        <button onClick={seeMoreButtonFnc} type='button' className='seemore_section_btn'>see more {seeMoreButton}</button>
+      </div>
+    }
     </>
   )
 }
