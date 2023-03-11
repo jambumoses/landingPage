@@ -42,22 +42,22 @@ export default function Contact() {
     <section className='getintouch_section' id='bottom'>
       <section className='getintouch_section_left'>
         <div className='getintouch_section_left_cont'>
-          <i data-aos="fade-down" className={merchantData.Contact.location.fontawesome_icon}></i> 
-          <span data-aos="fade-down"> {merchantData.Contact.location.address}</span>
+          <i data-aos="fade-up" className={merchantData.Contact.location.fontawesome_icon}></i> 
+          <span data-aos="fade-up"> {merchantData.Contact.location.address}</span>
         </div>
 
         <div className='getintouch_section_left_cont'>
-          <i data-aos="fade-down" className={merchantData.Contact.phone.fontawesome_icon}></i> 
-          <span data-aos="fade-down">{merchantData.Contact.phone.title}</span>
+          <i data-aos="fade-up" className={merchantData.Contact.phone.fontawesome_icon}></i> 
+          <span data-aos="fade-up">{merchantData.Contact.phone.title}</span>
         </div>
 
         <div className='getintouch_section_left_cont'>
-          <i data-aos="fade-down" className={merchantData.Contact.email.fontawesome_icon}></i> 
-          <span data-aos="fade-down">{merchantData.Contact.email.mail}</span>
+          <i data-aos="fade-up" className={merchantData.Contact.email.fontawesome_icon}></i> 
+          <span data-aos="fade-up">{merchantData.Contact.email.mail}</span>
         </div>
 
         <div className='getintouch_section_left_socials'>
-          <h3 data-aos="fade-down">{merchantData.socials.heading}</h3>
+          <h3 data-aos="fade-up">{merchantData.socials.heading}</h3>
           <span data-aos="fade-left">
             {merchantData.socials.social.map(function(item){
               return(

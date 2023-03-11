@@ -1,8 +1,11 @@
-import {React,useEffect} from 'react'
+import {React,useEffect, useState} from 'react'
 import Aos from "aos";
 import "aos/dist/aos.css";
 import {useSelector, useDispatch} from "react-redux"
 import { constantActions } from '../store/constantSlice';
+import axios from 'axios';
+import { bannerActions } from '../store/BannerSlice';
+import { BrandsActions } from '../store/BrandsSlice';
 
 
 /* brand Cards */
@@ -40,11 +43,35 @@ export default function Brands() {
 
   
   // brands data
+  const brands = axios.create({
+    baseURL: "http://localhost:3500/arafat/api/brands",
+    Headers: {
+      "Content-type": "application/json",
+    },
+  });
+  
+     // brands data
+     brands.get().then((response)=>{
+      dispatch(BrandsActions.getBrands(response.data))
+     });
+     
+  // brands data
   const BrandsData = useSelector(state=>state.brands.brands)
+
+  const brandsBanner = axios.create({
+    baseURL: "http://localhost:3500/arafat/api/banners/brandsbanner",
+    Headers: {
+      "Content-type": "application/json",
+    },
+  });
 
 
   useEffect(()=>{
     Aos.init({duration: 2000});
+
+    brandsBanner.get().then((response)=>{
+      dispatch(bannerActions.getBrandsBanner(response.data[0]))
+     });
   },[]);
 
   return (
@@ -56,7 +83,7 @@ export default function Brands() {
           </div>
 
           <div className='brand_banner_thumbnail'>
-            <img src={require("./img/brands_banner1.png")} alt="" />
+            <img src={require(`${BrandBanner.image.url}`)} alt="" />
           </div>
       </section>
 
@@ -69,7 +96,7 @@ export default function Brands() {
       <section className='brand_section'>
         {BrandsData.brands.map(function(item){
           return(
-            <BrandCard key={item.id} count={item.count} name={item.name} description={item.description} image={item.image} link={item.link}/>
+            <BrandCard key={item.count} count={item.count} name={item.name} description={item.description} image={item.image} link={item.link}/>
           )
         })}
       </section>

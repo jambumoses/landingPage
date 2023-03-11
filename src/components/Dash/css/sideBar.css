@@ -1,0 +1,34 @@
+aside{
+    background-color: lightgoldenrodyellow;
+    height: 100%;
+    margin-top: 5px;
+    padding: 10px 0px;
+    width: 210px;
+    padding: 10px;
+    padding-left: 1%;
+}
+
+aside ul{
+    list-style-type: none;
+}
+
+
+aside ul li{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 7% 0px;
+    font-size: 16px;
+    text-transform: capitalize;
+    font-family: poppins, sans-serif;
+    cursor: pointer;
+}
+
+aside ul .active{
+    color: rgb(113, 160, 160);
+}
+
+aside ul li:hover{
+    color: rgb(113, 160, 160);
+}
+
