@@ -19,9 +19,9 @@ function DashNav() {
           <img src={img} alt="" />
         </span>
 
-        <span className='profile-user'>jambu moses <span><i className="fa fa-dropdown">a</i></span></span>
+        <span className='profile-user'>jambu moses . <b>Admin</b> <span><i className="fa fa-angle-down"></i></span></span>
         <div className='profile-user-dropdown'>
-          logo out
+          <span>logo out</span>
         </div>
       </div>
     </nav>

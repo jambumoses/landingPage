@@ -14,3 +14,621 @@
     text-transform: capitalize;
     color: rgba(0, 0, 0, 0.445);
 }
+
+
+
+.type1{
+    display: block;
+    width: 100%;
+    margin: 30px 0px;
+    background-color: transparent;
+}
+
+.type1 h5{
+    color: rgba(0, 0, 0, 0.493);
+    font-size: 16px;
+    text-align: left;
+    text-transform: capitalize;
+}
+
+.type1 div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.type1 div input{
+    display: inline-block;
+    width: 50%;
+    height: 30px;
+    border-radius: 2px;
+    outline: none;
+    border: none;
+    padding: 0px 20px;
+    font-size: 13px;
+    font-family: poppins, sans-serif;
+    color: rgba(0, 0, 0, 0.623);
+    background-color: rgb(240, 240, 240);
+}
+
+.type1 div textarea{
+    display: inline-block;
+    width: 50%;
+    min-height: 100px;
+    max-height: 100px;
+    border-radius: 2px;
+    outline: none;
+    border: none;
+    padding: 10px 20px;
+    font-size: 13px;
+    font-family: poppins, sans-serif;
+    color: rgba(0, 0, 0, 0.623);
+    background-color: rgb(240, 240, 240);
+}
+
+.type1 div span{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.type1 div span .input-status{
+    padding-left: 20px;
+    padding-bottom: 5px;
+}
+
+.type1 div span .edit{
+    outline: none;
+    text-transform: capitalize;
+    font-family: poppins, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: white;
+    background-color: rgb(8, 155, 212);
+    border: none;
+    border-radius: 5px;
+    padding: 5px 20px;
+    height: 30px;
+}
+
+.type1 div span .update{
+    outline: none;
+    text-transform: capitalize;
+    font-family: poppins, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: white;
+    background-color: rgba(231, 77, 22, 0.753);
+    border: none;
+    border-radius: 5px;
+    padding: 5px 20px;
+    margin-left: 20px;
+    height: 30px;
+}
+
+
+
+.logos-section{
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    margin: 30px 0px;
+    margin-top: 100px;    
+}
+
+.logos-section h5{
+    color: rgba(0, 0, 0, 0.493);
+    font-size: 16px;
+    text-align: left;
+    text-transform: capitalize;
+}
+
+.logos-section-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color:  rgb(240, 240, 240);
+    height: 300px;
+}
+
+.logos-section-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: transparent;
+    height: 250px;
+    width: 30%;
+    margin: 20px;
+}
+
+.logos-section-item h5{
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.644);
+}
+
+.logos-section-item span{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    text-transform: capitalize;
+    font-size: 17px;
+    color: rgba(0, 0, 0, 0.445);
+    width: 70%;
+    height: 150px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.logos-section-item button{
+    height: 30px;
+    outline: none;
+    border: none;
+    font-family: poppins, sans-serif;
+    font-size: 13px;
+    text-transform: capitalize;
+    padding: 0px 20px;
+    margin-top: 30px;
+    border-radius: 5px;
+    color: rgba(0, 0, 0, 0.644);
+    background-color: white;
+}
+
+.gallery-section{
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    margin: 30px 0px;
+    margin-top: 100px;
+}
+
+.gallery-section h5{
+    color: rgba(0, 0, 0, 0.493);
+    font-size: 16px;
+    text-align: left;
+    text-transform: capitalize;
+}
+
+.gallery-section-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: baseline;
+    background-color:  transparent;
+    height: 300px;
+}
+
+.gallery-section-container .galar{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 60%;
+    background-color: transparent;
+    overflow-x: auto;
+}
+
+.gallery-section-container .galar .image-thmub{
+    display: flex;
+    width: 150px;
+    height: 150px;
+    background-color: rgb(240, 240, 240);
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.gallery-section-container .galar .image-thmub img{
+    outline: none;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.gallery-upload{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: transparent;
+    width: 40%;
+}
+
+.gallery-upload .dropimage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+    font-size: 17px;
+    color: rgba(0, 0, 0, 0.445);
+    background-color: rgb(240, 240, 240);
+    width: 200px;
+    height: 150px;
+    border-radius: 10px;
+}
+
+.gallery-upload-buttons button{
+    height: 30px;
+    outline: none;
+    border: none;
+    font-family: poppins, sans-serif;
+    font-size: 13px;
+    text-transform: capitalize;
+    padding: 0px 20px;
+    margin: 0px 10px;
+    border-radius: 5px;
+    color: rgba(0, 0, 0, 0.644);
+}
+
+
+
+.type-notes{
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    margin: 30px 0px;
+    margin-top: 100px;
+}
+
+.type-notes-titles{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+.type-notes-heading{
+    color: rgba(0, 0, 0, 0.493);
+    font-size: 16px;
+    text-align: left;
+    text-transform: capitalize;   
+}
+
+.type-notes-titles button{
+    outline: none;
+    text-transform: capitalize;
+    font-family: poppins, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: white;
+    background-color: rgb(8, 155, 212);
+    border: none;
+    border-radius: 5px;
+    padding: 5px 20px;
+    height: 30px;
+    width: 150px;
+    margin-top: 20px;
+}
+
+.type-notes-container{
+    height: 300px;
+    margin-top: 20px;
+    background-color: rgb(240, 240, 240);
+    overflow-x: auto;
+}
+
+.note-item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    margin: 20px;
+    padding: 10px 20px;
+}
+
+.note-item-notes{
+    width: 50%;
+    font-family: poppins, sans-serif;
+    font-weight: initial;
+    color: rgba(0, 0, 0, 0.623);
+    font-size: 13px;
+}
+
+.note-item-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 50%;
+}
+
+.note-item-buttons .edit{
+    outline: none;
+    text-transform: capitalize;
+    font-family: poppins, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: white;
+    background-color: rgb(8, 155, 212);
+    border: none;
+    border-radius: 5px;
+    padding: 5px 20px;
+    height: 30px;
+}
+
+.note-item-buttons .delete{
+    outline: none;
+    text-transform: capitalize;
+    font-family: poppins, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: white;
+    background-color: darkred;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 20px;
+    margin-left: 20px;
+    height: 30px;
+}
+
+
+
+.contactInformation{
+    /* height: 300px; */
+    margin-top: 100px;
+    background-color: rgb(240, 240, 240);
+    padding-bottom: 20px;
+}
+
+.contactInformation h5{
+    color: rgba(0, 0, 0, 0.644);
+    font-size: 18px;
+    text-align: left;
+    text-transform: capitalize;
+    padding: 20px;
+}
+
+.contactInformation-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.contactInformation-item{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+}
+
+.contactInformation-item-title{
+    color: rgba(0, 0, 0, 0.493);
+    font-size: 16px;
+    text-align: left;
+    text-transform: capitalize;
+    padding: 0px 20px;
+    padding-bottom: 20px;
+}
+
+.contactInformation-item-title i{
+    color: rgba(0, 0, 0, 0.445);
+    font-size: 13px;
+    margin-top: -5px;
+    margin-right: 5px;
+}
+
+.contactInformation-item-detail{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    width: 100%;
+}
+
+.contactInformation-item-detail input{
+    margin: 10px;
+    height: 25px;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    font-size: 13px;
+    font-family: poppins, sans-serif;
+    padding: 10px;
+    color: rgba(0, 0, 0, 0.445);
+}
+
+
+.contactInformation-item-detail .save{
+    outline: none;
+    text-transform: capitalize;
+    font-family: poppins, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: white;
+    background-color: rgb(8, 155, 212);
+    border: none;
+    border-radius: 5px;
+    padding: 5px 20px;
+    height: 30px;
+    width: 100px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.contactInformation-item-detail .save i{
+    color: white;
+    font-size: 13px;
+    padding-right: 5px;
+}
+
+
+
+.socials-section{
+     /* height: 300px; */
+     margin-top: 100px;
+     /* background-color: rgb(240, 240, 240); */
+     padding-bottom: 20px;
+ }
+ .socials-section-titles{
+    display: flex;
+    flex-direction: column;
+ }
+
+.socials-section-titles .socials-section-heading{
+    display: flex;
+     color: rgba(0, 0, 0, 0.644);
+     font-size: 18px;
+     text-align: left;
+     text-transform: capitalize;
+     padding: 20px;   
+}
+
+.socials-section-titles button{
+    outline: none;
+    text-transform: capitalize;
+    font-family: poppins, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: white;
+    background-color: rgb(8, 155, 212);
+    border: none;
+    border-radius: 5px;
+    padding: 5px 20px;
+    height: 30px;
+    width: 150px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.socials-section-socialsContainer{
+    height: 300px;
+    margin-top: 20px;
+    background-color: rgb(240, 240, 240);
+    overflow-x: auto;
+}
+
+.socials-section-socials-item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    margin: 20px;
+    padding: 10px 20px;
+    border-radius: 0px;
+}
+
+.socials-section-socials-item-icon{
+    width: 20%;
+    font-family: poppins, sans-serif;
+    font-weight: initial;
+    color: rgba(0, 0, 0, 0.623);
+    font-size: 13px;
+}
+
+.socials-section-socials-item-title{
+    width: 20%;
+    font-family: poppins, sans-serif;
+    font-weight: initial;
+    color: rgba(0, 0, 0, 0.623);
+    font-size: 13px;
+}
+
+.socials-section-socials-item-link{
+    width: 300px;
+    font-family: poppins, sans-serif;
+    font-weight: initial;
+    color: rgba(0, 0, 0, 0.623);
+    font-size: 13px;
+}
+
+.socials-section-socials-item-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 300px;
+}
+
+
+
+.socials-section-socials-item-buttons .edit{
+    outline: none;
+    text-transform: capitalize;
+    font-family: poppins, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: white;
+    background-color: rgb(8, 155, 212);
+    border: none;
+    border-radius: 5px;
+    padding: 5px 20px;
+    height: 30px;
+}
+
+.socials-section-socials-item-buttons .delete{
+    outline: none;
+    text-transform: capitalize;
+    font-family: poppins, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: white;
+    background-color: darkred;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 20px;
+    margin-left: 20px;
+    height: 30px;
+}
+
+
+
+
+.membership-section{
+     /* height: 300px; */
+     margin-top: 100px;
+     /* background-color: rgb(240, 240, 240); */
+     padding-bottom: 20px;
+}
+
+.membership-section-titles{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.membership-section-heading{
+    display: flex;
+     color: rgba(0, 0, 0, 0.644);
+     font-size: 18px;
+     text-align: left;
+     text-transform: capitalize;
+     padding: 20px; 
+}
+
+.membership-section-titles button{
+    outline: none;
+    text-transform: capitalize;
+    font-family: poppins, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: white;
+    background-color: rgb(8, 155, 212);
+    border: none;
+    border-radius: 5px;
+    padding: 5px 20px;
+    height: 30px;
+    width: 150px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.socials-section-socials-item-image{
+    background-color: transparent;
+    width: 100px;
+    height: 50px;
+}
+
+.socials-section-socials-item-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
