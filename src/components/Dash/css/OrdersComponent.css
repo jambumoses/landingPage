@@ -1,4 +1,4 @@
-.HomeComponent-section{
+.OrdersComponent-section{
     background-color: white;
     margin-top: 5px;
     margin-left: 10px;
@@ -9,7 +9,7 @@
     overflow-y: auto;
 }
 
-.HomeComponent-section h2{
+.OrdersComponent-section h2{
     font-size: 30px;
     text-transform: capitalize;
     color: rgba(0, 0, 0, 0.445);

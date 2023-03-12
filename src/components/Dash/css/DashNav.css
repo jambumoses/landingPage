@@ -1,5 +1,5 @@
 .dashboard{
-  background-color: lightgray;
+  background-color: rgba(211, 211, 211, 0.158);
   height: 100vh;
   overflow: hidden;
 }
@@ -11,7 +11,7 @@
   align-items: center;
   height: 60px;
   padding: 0px 2%;
-  background-color: lightgoldenrodyellow;
+  background-color: white;
 }
 
 .dash-titles{

@@ -191,7 +191,7 @@ export default function App() {
                 <Route path="/dashboard" component={Dashboard} />
 
                 {/* 404 */}
-                <Route path='*' component={Home}/>
+                {/* <Route path='*' component={Home}/> */}
         </Switch>
 
         {
