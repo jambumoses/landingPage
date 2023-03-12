@@ -264,7 +264,7 @@ export default function MerchantsComponent() {
           <div className="socials-section">
             <div className="socials-section-titles">
               <span className="socials-section-heading">socials</span>
-              <button type="button"><i className="fa fa-add" style={{color:"white", fontSize:"13px"}}></i> add note</button>
+              <button type="button"><i className="fa fa-add" style={{color:"white", fontSize:"13px"}}></i> add social</button>
             </div>
 
             <section className="socials-section-socialsContainer">
@@ -327,7 +327,7 @@ export default function MerchantsComponent() {
           <div className="membership-section">
             <div className="membership-section-titles">
               <span className="membership-section-heading">Governance Board <i style={{fontSize:"13px", marginTop: "5px", marginLeft: "10px"}} className="fa fa-pen"></i></span>
-              <button type="button"><i className="fa fa-add" style={{color:"white", fontSize:"13px"}}></i> add note</button>
+              <button type="button"><i className="fa fa-add" style={{color:"white", fontSize:"13px"}}></i> add</button>
             </div>
 
             <div className="socials-section-socialsContainer">
@@ -404,7 +404,7 @@ export default function MerchantsComponent() {
          <div className="membership-section">
             <div className="membership-section-titles">
               <span className="membership-section-heading">Management Team Board <i style={{fontSize:"13px", marginTop: "5px", marginLeft: "10px"}} className="fa fa-pen"></i></span>
-              <button type="button"><i className="fa fa-add" style={{color:"white", fontSize:"13px"}}></i> add note</button>
+              <button type="button"><i className="fa fa-add" style={{color:"white", fontSize:"13px"}}></i> add</button>
             </div>
 
             <div className="socials-section-socialsContainer">

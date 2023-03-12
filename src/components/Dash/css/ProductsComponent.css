@@ -9,8 +9,192 @@
     overflow-y: auto;
 }
 
-.ProductComponent-section h2{
+.ProductComponent-section .ProductComponent-head h2{
     font-size: 30px;
     text-transform: capitalize;
     color: rgba(0, 0, 0, 0.445);
+}
+
+.ProductComponent-filter{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 30px 0px;
+}
+
+.ProductComponent-filter button{
+    outline: none;
+    text-transform: capitalize;
+    font-family: poppins, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: white;
+    background-color: rgb(8, 155, 212);
+    border: none;
+    border-radius: 5px;
+    padding: 5px 20px;
+    height: 30px;
+}
+
+.ProductComponent-filter-search{
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(240, 240, 240, 0.651);
+    height: 30px;
+    width: 280px;
+    border-radius: 30px;
+}
+
+.ProductComponent-filter-search input{
+    height: 30px;
+    width: 85%;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    padding-left: 30px;
+    font-size: 13px;
+    font-family: poppins, sans-serif;
+    color: rgba(0, 0, 0, 0.671);
+}
+
+.ProductComponent-filter-search span{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    width: 15%;
+    height: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    cursor: pointer;
+}
+
+.products-section{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    background-color: rgba(240, 240, 240, 0.384);
+}
+
+.products-section-item{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: transparent;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    border-bottom: 1px solid rgba(71, 20, 20, 0.137);
+}
+
+.products-section-item span{
+    display: block;
+    width: 20%;
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 13px;
+    font-family: poppins, sans-serif;
+}
+
+
+.products-section-item-main{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: transparent;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    border-bottom: 1px solid rgba(71, 20, 20, 0.137);
+    padding: 20px 0px;
+}
+
+.products-section-item-main .products-section-item-image{
+
+    background-color: transparent;
+    height: 100px;
+}
+
+.products-section-item-main .products-section-item-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.products-section-item-main .products-section-item-name{
+    font-weight: initial;
+    font-family: poppins, sans-serif;
+    color: grey;
+}
+
+.products-section-item-main .products-section-item-category{
+    font-weight: initial;
+    font-family: poppins, sans-serif;
+    color: grey;
+}
+
+
+.products-section-item-main .products-section-item-slug{
+    font-weight: initial;
+    font-family: poppins, sans-serif;
+    color: grey;
+    text-transform: uppercase;
+}
+
+.products-section-item-main .products-section-item-description{
+    font-weight: initial;
+    font-family: poppins, sans-serif;
+    color: grey;
+    text-transform: lowercase;
+}
+
+.products-section-item-main .products-section-item-price{
+    font-size: 15px;
+    font-weight: bold;
+    font-family: poppins, sans-serif;
+    color: rgba(0, 0, 0, 0.671);
+}
+
+.products-section-item-buttons{
+    display: flex;
+    flex-direction: row;
+}
+
+.products-section-item span .edit{
+    outline: none;
+    text-transform: capitalize;
+    font-family: poppins, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: white;
+    background-color: rgb(8, 155, 212);
+    border: none;
+    border-radius: 5px;
+    padding: 5px 20px;
+    width: 50px;
+    height: 30px;
+}
+
+
+.products-section-item span .delete{
+    outline: none;
+    text-transform: capitalize;
+    font-family: poppins, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: white;
+    background-color: darkred;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 20px;
+    margin-left: 10px;
+    width: 50px;
+    height: 30px;
 }

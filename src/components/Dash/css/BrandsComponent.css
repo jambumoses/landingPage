@@ -9,8 +9,124 @@
     overflow-y: auto;
 }
 
-.BrandsComponent-section h2{
+.BrandsComponent-section-head{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.BrandsComponent-section .BrandsComponent-section-head h2{
     font-size: 30px;
     text-transform: capitalize;
     color: rgba(0, 0, 0, 0.445);
+}
+
+.BrandsComponent-section .BrandsComponent-section-head button{
+    outline: none;
+    text-transform: capitalize;
+    font-family: poppins, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: white;
+    background-color: rgb(8, 155, 212);
+    border: none;
+    border-radius: 5px;
+    padding: 5px 20px;
+    height: 30px;
+}
+
+
+.BrandsDash-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    background-color: rgba(240, 240, 240, 0.384);
+}
+
+
+.BrandsDash-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: transparent;
+    width: 300px;
+    /* height: 270px; */
+    margin: 20px;
+}
+
+.BrandsDash-item span{
+    display: block;
+    padding: 5px 20px;
+}
+
+.BrandsDash-item-count{
+    font-size: 40px;
+    font-family: poppins, sans-serif;
+}
+
+.BrandsDash-item-thumbnail{
+    background-color: transparent;
+    width: 250px;
+    height: 150px;
+    margin-left: 20px;
+}
+
+.BrandsDash-item-thumbnail img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.BrandsDash-item-title{
+    text-transform: capitalize;
+    font-size: 20px;
+}
+
+.BrandsDash-item-description{
+    font-size: 14px;
+}
+
+.BrandsDash-item-link{
+    font-size: 13px;
+    color: grey;
+}
+
+.BrandsDash-item-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.BrandsDash-item-buttons .edit{
+    outline: none;
+    text-transform: capitalize;
+    font-family: poppins, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: white;
+    background-color: rgb(8, 155, 212);
+    border: none;
+    border-radius: 5px;
+    padding: 5px 20px;
+    height: 30px;
+}
+
+.BrandsDash-item-buttons .delete{
+    outline: none;
+    text-transform: capitalize;
+    font-family: poppins, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: white;
+    background-color: darkred;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 20px;
+    margin-left: 20px;
+    height: 30px;
 }
