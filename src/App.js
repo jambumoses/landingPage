@@ -165,7 +165,19 @@ export default function App() {
     <>
     <Router>
         {
-          (currentPage != "Dashboard") && <Nav/>
+          (currentPage != "Dashboard") &&
+          (currentPage != "DashMerchant") &&
+          (currentPage != "DashBanners") &&
+          (currentPage != "DashBrands") &&
+          (currentPage != "DashProducts") &&
+          (currentPage != "DashCategories") &&
+          (currentPage != "DashOrders") &&
+          (currentPage != "DashTrends") &&
+          (currentPage != "DashUsers") &&
+          (currentPage != "DashMessages") &&
+          (currentPage != "DashEmailListing") &&
+          (currentPage != "DashSettings") &&
+          <Nav/>
         }
       
         <Switch>
@@ -195,7 +207,20 @@ export default function App() {
         </Switch>
 
         {
-          (currentPage != "home" && currentPage != "Dashboard") && <Footer/>
+          (currentPage != "home") && 
+          (currentPage != "Dashboard") &&
+          (currentPage != "DashMerchant") &&
+          (currentPage != "DashBanners") &&
+          (currentPage != "DashBrands") &&
+          (currentPage != "DashProducts") &&
+          (currentPage != "DashCategories") &&
+          (currentPage != "DashOrders") &&
+          (currentPage != "DashTrends") &&
+          (currentPage != "DashUsers") &&
+          (currentPage != "DashMessages") &&
+          (currentPage != "DashEmailListing") &&
+          (currentPage != "DashSettings")&& 
+          <Footer/>
         }
         
     </Router>

@@ -112,7 +112,13 @@
     margin-top: 20px;
     border-bottom: 1px solid rgba(71, 20, 20, 0.137);
     padding: 20px 0px;
+    
 }
+
+.products-section-item-main:hover{
+    background-color: rgba(211, 211, 211, 0.219);
+}
+
 
 .products-section-item-main .products-section-item-image{
 

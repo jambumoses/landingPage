@@ -3,6 +3,7 @@ import "../css/MerchantComponent.css"
 import image from "../../../components/img/member_remove.png";
 import { useDispatch, useSelector } from 'react-redux';
 import { constantActions } from '../../../store/constantSlice';
+import DashFooter from './DashFooter';
 
 
 export default function MerchantsComponent() {
@@ -12,7 +13,9 @@ export default function MerchantsComponent() {
 
   // page titles
   dispatch(constantActions.updatePageTitles(companyName+" . "+"Merchant"));
-  dispatch(constantActions.setCurrentPage("Dashboard"));
+  dispatch(constantActions.setCurrentPage("DashMerchant"));
+
+  const merchantData = useSelector(state=>state.merchant)
 
   return (
     <>
@@ -23,7 +26,7 @@ export default function MerchantsComponent() {
           <span className="type1">
             <h5>merchant title</h5>
             <div>
-              <input type="text" placeholder="Title" name="merchant" />
+              <input value={merchantData.CompanyTitle} type="text" placeholder="Title" name="merchant" />
               <span>
                 <div className="input-status">
                   <i className="fa fa-circle-check" style={{color: "green"}}></i>
@@ -40,7 +43,7 @@ export default function MerchantsComponent() {
           <span className="type1">
             <h5>merchant description</h5>
             <div>
-              <textarea name="description" placeholder="Type Notes" id="" cols="30" rows="10"></textarea>
+              <textarea value={merchantData.CompanyDescription} name="description" placeholder="Type Notes" id="" cols="30" rows="10"></textarea>
               <span>
               <div className="input-status">
                   <i className="fa fa-circle-check" style={{display: "none"}}></i>
@@ -57,7 +60,7 @@ export default function MerchantsComponent() {
           <span className="type1">
             <h5>merchant Foot note</h5>
             <div>
-            <textarea name="description" placeholder="Type Notes" id="" cols="30" rows="10"></textarea>
+            <textarea value={merchantData.footerCompanyTitle} name="description" placeholder="Type Notes" id="" cols="30" rows="10"></textarea>
               <span>
               <div className="input-status">
                   <i className="fa fa-circle-check" style={{display: "none"}}></i>
@@ -74,7 +77,7 @@ export default function MerchantsComponent() {
           <span className="type1">
             <h5>vission</h5>
             <div>
-            <textarea name="description" placeholder="Type Notes" id="" cols="30" rows="10"></textarea>
+            <textarea value={merchantData.aboutus.vision} name="description" placeholder="Type Notes" id="" cols="30" rows="10"></textarea>
               <span>
               <div className="input-status">
                   <i className="fa fa-circle-check" style={{display: "none"}}></i>
@@ -92,7 +95,7 @@ export default function MerchantsComponent() {
           <span className="type1">
             <h5>mission</h5>
             <div>
-            <textarea name="description" placeholder="Type Notes" id="" cols="30" rows="10"></textarea>
+            <textarea value={merchantData.aboutus.mission} name="description" placeholder="Type Notes" id="" cols="30" rows="10"></textarea>
               <span>
               <div className="input-status">
                   <i className="fa fa-circle-check" style={{display: "none"}}></i>
@@ -110,7 +113,7 @@ export default function MerchantsComponent() {
           <span className="type1">
             <h5>map location</h5>
             <div>
-              <input type="text" placeholder="Enter URL" name="merchant" />
+              <input value={merchantData.contactUsPage.mapLocation} type="text" placeholder="Enter URL" name="merchant" />
               <span>
                 <div className="input-status">
                   <i className="fa fa-circle-check" style={{display:"none"}}></i>
@@ -181,53 +184,21 @@ export default function MerchantsComponent() {
             </div>
 
             <div className="type-notes-container">
-              <span className="note-item">
-                <span className="note-item-notes">We Are Hiring! Font Awesome is hiring a product designer to help us take Shoelace to the next level.</span>
-                <div className="note-item-buttons">
-                  <button className="edit" type="button"><i style={{marginRight:"10px",fontSize:"13px", color:"white"}} className="fa fa-pen-to-square"></i> edit</button>
-                  <button className="delete" type="button"><i style={{marginRight:"10px",fontSize:"13px", color:"white"}} className="fa fa-eraser"></i> delete</button>
-                </div>
-              </span>
 
-              <span className="note-item">
-                <span className="note-item-notes">We Are Hiring! Font Awesome is hiring a product designer to help us take Shoelace to the next level.</span>
-                <div className="note-item-buttons">
-                  <button className="edit" type="button"><i style={{marginRight:"10px",fontSize:"13px", color:"white"}} className="fa fa-pen-to-square"></i> edit</button>
-                  <button className="delete" type="button"><i style={{marginRight:"10px",fontSize:"13px", color:"white"}} className="fa fa-eraser"></i> delete</button>
-                </div>
-              </span>
+              {
+                merchantData.aboutus.notes.map(function(item){
+                  return(
+                    <span className="note-item" key={item._id}>
+                      <span className="note-item-notes">{item.note}</span>
+                      <div className="note-item-buttons">
+                        <button className="edit" type="button"><i style={{marginRight:"10px",fontSize:"13px", color:"white"}} className="fa fa-pen-to-square"></i> edit</button>
+                        <button className="delete" type="button"><i style={{marginRight:"10px",fontSize:"13px", color:"white"}} className="fa fa-eraser"></i> delete</button>
+                      </div>
+                    </span>
+                  )
+                })
+              }
 
-              <span className="note-item">
-                <span className="note-item-notes">We Are Hiring! Font Awesome is hiring a product designer to help us take Shoelace to the next level.</span>
-                <div className="note-item-buttons">
-                  <button className="edit" type="button"><i style={{marginRight:"10px",fontSize:"13px", color:"white"}} className="fa fa-pen-to-square"></i> edit</button>
-                  <button className="delete" type="button"><i style={{marginRight:"10px",fontSize:"13px", color:"white"}} className="fa fa-eraser"></i> delete</button>
-                </div>
-              </span>
-
-              <span className="note-item">
-                <span className="note-item-notes">We Are Hiring! Font Awesome is hiring a product designer to help us take Shoelace to the next level.</span>
-                <div className="note-item-buttons">
-                  <button className="edit" type="button"><i style={{marginRight:"10px",fontSize:"13px", color:"white"}} className="fa fa-pen-to-square"></i> edit</button>
-                  <button className="delete" type="button"><i style={{marginRight:"10px",fontSize:"13px", color:"white"}} className="fa fa-eraser"></i> delete</button>
-                </div>
-              </span>
-
-              <span className="note-item">
-                <span className="note-item-notes">We Are Hiring! Font Awesome is hiring a product designer to help us take Shoelace to the next level.</span>
-                <div className="note-item-buttons">
-                  <button className="edit" type="button"><i style={{marginRight:"10px",fontSize:"13px", color:"white"}} className="fa fa-pen-to-square"></i> edit</button>
-                  <button className="delete" type="button"><i style={{marginRight:"10px",fontSize:"13px", color:"white"}} className="fa fa-eraser"></i> delete</button>
-                </div>
-              </span>
-
-              <span className="note-item">
-                <span className="note-item-notes">We Are Hiring! Font Awesome is hiring a product designer to help us take Shoelace to the next level.</span>
-                <div className="note-item-buttons">
-                  <button className="edit" type="button"><i style={{marginRight:"10px",fontSize:"13px", color:"white"}} className="fa fa-pen-to-square"></i> edit</button>
-                  <button className="delete" type="button"><i style={{marginRight:"10px",fontSize:"13px", color:"white"}} className="fa fa-eraser"></i> delete</button>
-                </div>
-              </span>
             </div>
           </div>
 
@@ -241,9 +212,9 @@ export default function MerchantsComponent() {
             <div className="contactInformation-item">
               <span className="contactInformation-item-title"><i className="fa fa-location-dot"></i> address</span>
               <span className="contactInformation-item-detail">
-                <input type="text" name="" id="" placeholder="Title" />
-                <input type="text" name="" id="" placeholder="Link"/>
-                <input type="text" name="" id="" placeholder="Fontawesome icon"/>
+                <input value={merchantData.Contact.location.address} type="text" name="" id="" placeholder="Title" />
+                <input value={merchantData.Contact.location.link} type="text" name="" id="" placeholder="Link"/>
+                <input value={merchantData.Contact.location.fontawesome_icon} type="text" name="" id="" placeholder="Fontawesome icon"/>
                 <button className="save" type="button"><i className="fa fa-floppy-disk"></i> save</button>
               </span>
             </div>
@@ -251,9 +222,9 @@ export default function MerchantsComponent() {
             <div className="contactInformation-item">
               <span className="contactInformation-item-title"><i className="fa fa-phone"></i> phone</span>
               <span className="contactInformation-item-detail">
-                <input type="text" name="" id="" placeholder="Title" />
-                <input type="text" name="" id="" placeholder="Link"/>
-                <input type="text" name="" id="" placeholder="Fontawesome icon"/>
+                <input value={merchantData.Contact.phone.type} type="text" name="" id="" placeholder="Title" />
+                <input value={merchantData.Contact.phone.link} type="text" name="" id="" placeholder="Link"/>
+                <input value={merchantData.Contact.phone.fontawesome_icon} type="text" name="" id="" placeholder="Fontawesome icon"/>
                 <button className="save" type="button"><i className="fa fa-floppy-disk"></i> save</button>
               </span>
             </div>
@@ -261,9 +232,9 @@ export default function MerchantsComponent() {
             <div className="contactInformation-item">
               <span className="contactInformation-item-title"><i className="fa fa-envelope"></i> mail</span>
               <span className="contactInformation-item-detail">
-                <input type="text" name="" id="" placeholder="Title" />
-                <input type="text" name="" id="" placeholder="Link"/>
-                <input type="text" name="" id="" placeholder="Fontawesome icon"/>
+                <input value={merchantData.Contact.email.type} type="text" name="" id="" placeholder="Title" />
+                <input value={merchantData.Contact.email.link} type="text" name="" id="" placeholder="Link"/>
+                <input value={merchantData.Contact.email.fontawesome_icon} type="text" name="" id="" placeholder="Fontawesome icon"/>
                 <button className="save" type="button"><i className="fa fa-floppy-disk"></i> save</button>
               </span>
             </div>
@@ -274,62 +245,31 @@ export default function MerchantsComponent() {
           {/* socials */}
           <div className="socials-section">
             <div className="socials-section-titles">
-              <span className="socials-section-heading">socials</span>
+              <span className="socials-section-heading">{merchantData.socials.heading}</span>
               <button type="button"><i className="fa fa-add" style={{color:"white", fontSize:"13px"}}></i> add social</button>
             </div>
 
             <section className="socials-section-socialsContainer">
-              <div className="socials-section-socials-item">
-                <span className="socials-section-socials-item-icon">fa fa-facebook</span>
-                <span className="socials-section-socials-item-title">
-                  sacco shield
-                </span>
-                <span className="socials-section-socials-item-link">http://localhost/www/sacco_shield-main/sacco_shield/index.php?page=borrowers</span>
-                  
-                <div className="socials-section-socials-item-buttons">
-                  <button className="edit" type="button"><i style={{marginRight:"10px",fontSize:"13px", color:"white"}} className="fa fa-pen-to-square"></i> edit</button>
-                  <button className="delete" type="button"><i style={{marginRight:"10px",fontSize:"13px", color:"white"}} className="fa fa-eraser"></i> delete</button>
-                </div>
-              </div>
 
-              <div className="socials-section-socials-item">
-                <span className="socials-section-socials-item-icon">fa fa-facebook</span>
-                <span className="socials-section-socials-item-title">
-                  sacco shield
-                </span>
-                <span className="socials-section-socials-item-link">http://localhost/www/sacco_shield-main/sacco_shield/index.php?page=borrowers</span>
-                  
-                <div className="socials-section-socials-item-buttons">
-                  <button className="edit" type="button"><i style={{marginRight:"10px",fontSize:"13px", color:"white"}} className="fa fa-pen-to-square"></i> edit</button>
-                  <button className="delete" type="button"><i style={{marginRight:"10px",fontSize:"13px", color:"white"}} className="fa fa-eraser"></i> delete</button>
-                </div>
-              </div>
+              {
+                merchantData.socials.social.map(function(item){
+                  return(
+                    <div className="socials-section-socials-item" key={item.id}>
+                      <span className="socials-section-socials-item-icon"><i className={item.fontawesome_icon} style={{color:"black",fontSize:"20px", paddingRight:"10px"}}></i> {item.fontawesome_icon} </span>
+                      <span className="socials-section-socials-item-title">
+                        {item.title}
+                      </span>
+                      <span className="socials-section-socials-item-link">{item.link}</span>
+                        
+                      <div className="socials-section-socials-item-buttons">
+                        <button className="edit" type="button"><i style={{marginRight:"10px",fontSize:"13px", color:"white"}} className="fa fa-pen-to-square"></i> edit</button>
+                        <button className="delete" type="button"><i style={{marginRight:"10px",fontSize:"13px", color:"white"}} className="fa fa-eraser"></i> delete</button>
+                      </div>
+                    </div>
+                  )
+                })
+              }
 
-              <div className="socials-section-socials-item">
-                <span className="socials-section-socials-item-icon">fa fa-facebook</span>
-                <span className="socials-section-socials-item-title">
-                  sacco shield
-                </span>
-                <span className="socials-section-socials-item-link">http://localhost/www/sacco_shield-main/sacco_shield/index.php?page=borrowers</span>
-                  
-                <div className="socials-section-socials-item-buttons">
-                  <button className="edit" type="button"><i style={{marginRight:"10px",fontSize:"13px", color:"white"}} className="fa fa-pen-to-square"></i> edit</button>
-                  <button className="delete" type="button"><i style={{marginRight:"10px",fontSize:"13px", color:"white"}} className="fa fa-eraser"></i> delete</button>
-                </div>
-              </div>
-
-              <div className="socials-section-socials-item">
-                <span className="socials-section-socials-item-icon">fa fa-facebook</span>
-                <span className="socials-section-socials-item-title">
-                  sacco shield
-                </span>
-                <span className="socials-section-socials-item-link">http://localhost/www/sacco_shield-main/sacco_shield/index.php?page=borrowers</span>
-                  
-                <div className="socials-section-socials-item-buttons">
-                  <button className="edit" type="button"><i style={{marginRight:"10px",fontSize:"13px", color:"white"}} className="fa fa-pen-to-square"></i> edit</button>
-                  <button className="delete" type="button"><i style={{marginRight:"10px",fontSize:"13px", color:"white"}} className="fa fa-eraser"></i> delete</button>
-                </div>
-              </div>
             </section>
           </div>
 
@@ -337,71 +277,36 @@ export default function MerchantsComponent() {
           {/* members */}
           <div className="membership-section">
             <div className="membership-section-titles">
-              <span className="membership-section-heading">Governance Board <i style={{fontSize:"13px", marginTop: "5px", marginLeft: "10px"}} className="fa fa-pen"></i></span>
+              <span className="membership-section-heading">{merchantData.aboutus.membership.board.title} <i style={{fontSize:"13px", marginTop: "5px", marginLeft: "10px"}} className="fa fa-pen"></i></span>
               <button type="button"><i className="fa fa-add" style={{color:"white", fontSize:"13px"}}></i> add</button>
             </div>
 
             <div className="socials-section-socialsContainer">
 
-              <div className="socials-section-socials-item">
-                <span className="socials-section-socials-item-image">
-                  <img src={image} alt="" />
-                </span>
-                <span className="socials-section-socials-item-title">
-                jambu moses
-                </span>
-                <span className="socials-section-socials-item-link">CEO Acardia Shopping Mall, Senior</span>
-                  
-                <div className="socials-section-socials-item-buttons">
-                  <button className="edit" type="button"><i style={{marginRight:"10px",fontSize:"13px", color:"white"}} className="fa fa-pen-to-square"></i> edit</button>
-                  <button className="delete" type="button"><i style={{marginRight:"10px",fontSize:"13px", color:"white"}} className="fa fa-eraser"></i> delete</button>
-                </div>
-              </div>
+              {
+                merchantData.aboutus.membership.board.members.map(function(item){
+                  return(
+                    <div className="socials-section-socials-item" key={item.id}>
+                      <span className="socials-section-socials-item-image">
+                        <img src={item.image} alt="" />
+                      </span>
+                      <span className="socials-section-socials-item-title">
+                      {item.name}
+                      </span>
+                      <span className="socials-section-socials-item-link">{item.role}</span>
+                        
+                      <div className="socials-section-socials-item-buttons">
+                        <button className="edit" type="button"><i style={{marginRight:"10px",fontSize:"13px", color:"white"}} className="fa fa-pen-to-square"></i> edit</button>
+                        <button className="delete" type="button"><i style={{marginRight:"10px",fontSize:"13px", color:"white"}} className="fa fa-eraser"></i> delete</button>
+                      </div>
+                    </div>
+                  )
+                })
+              }
 
-              <div className="socials-section-socials-item">
-                <span className="socials-section-socials-item-image">
-                  <img src={image} alt="" />
-                </span>
-                <span className="socials-section-socials-item-title">
-                jambu moses
-                </span>
-                <span className="socials-section-socials-item-link">CEO Acardia Shopping Mall, Senior</span>
-                  
-                <div className="socials-section-socials-item-buttons">
-                  <button className="edit" type="button"><i style={{marginRight:"10px",fontSize:"13px", color:"white"}} className="fa fa-pen-to-square"></i> edit</button>
-                  <button className="delete" type="button"><i style={{marginRight:"10px",fontSize:"13px", color:"white"}} className="fa fa-eraser"></i> delete</button>
-                </div>
-              </div>
 
-              <div className="socials-section-socials-item">
-                <span className="socials-section-socials-item-image">
-                  <img src={image} alt="" />
-                </span>
-                <span className="socials-section-socials-item-title">
-                jambu moses
-                </span>
-                <span className="socials-section-socials-item-link">CEO Acardia Shopping Mall, Senior</span>
-                  
-                <div className="socials-section-socials-item-buttons">
-                  <button className="edit" type="button"><i style={{marginRight:"10px",fontSize:"13px", color:"white"}} className="fa fa-pen-to-square"></i> edit</button>
-                  <button className="delete" type="button"><i style={{marginRight:"10px",fontSize:"13px", color:"white"}} className="fa fa-eraser"></i> delete</button>
-                </div>
-              </div>
 
-              <div className="socials-section-socials-item">
-                <span className="socials-section-socials-item-image">
-                  <img src={image} alt="" />
-                </span>
-                <span className="socials-section-socials-item-title">
-                jambu moses
-                </span>
-                <span className="socials-section-socials-item-link">CEO Acardia Shopping Mall, Senior</span>
-                  
-                <div className="socials-section-socials-item-buttons">
-                  <button className="edit" type="button"><i style={{marginRight:"10px",fontSize:"13px", color:"white"}} className="fa fa-pen-to-square"></i> edit</button>
-                  <button className="delete" type="button"><i style={{marginRight:"10px",fontSize:"13px", color:"white"}} className="fa fa-eraser"></i> delete</button>
-                </div>
-              </div>
+
 
             </div>
           </div>
@@ -414,71 +319,32 @@ export default function MerchantsComponent() {
          {/* members */}
          <div className="membership-section">
             <div className="membership-section-titles">
-              <span className="membership-section-heading">Management Team Board <i style={{fontSize:"13px", marginTop: "5px", marginLeft: "10px"}} className="fa fa-pen"></i></span>
+              <span className="membership-section-heading">{merchantData.aboutus.membership.managementTeam.title} <i style={{fontSize:"13px", marginTop: "5px", marginLeft: "10px"}} className="fa fa-pen"></i></span>
               <button type="button"><i className="fa fa-add" style={{color:"white", fontSize:"13px"}}></i> add</button>
             </div>
 
             <div className="socials-section-socialsContainer">
-
-              <div className="socials-section-socials-item">
-                <span className="socials-section-socials-item-image">
-                  <img src={image} alt="" />
-                </span>
-                <span className="socials-section-socials-item-title">
-                jambu moses
-                </span>
-                <span className="socials-section-socials-item-link">CEO Acardia Shopping Mall, Senior</span>
-                  
-                <div className="socials-section-socials-item-buttons">
-                  <button className="edit" type="button"><i style={{marginRight:"10px",fontSize:"13px", color:"white"}} className="fa fa-pen-to-square"></i> edit</button>
-                  <button className="delete" type="button"><i style={{marginRight:"10px",fontSize:"13px", color:"white"}} className="fa fa-eraser"></i> delete</button>
-                </div>
-              </div>
-
-              <div className="socials-section-socials-item">
-                <span className="socials-section-socials-item-image">
-                  <img src={image} alt="" />
-                </span>
-                <span className="socials-section-socials-item-title">
-                jambu moses
-                </span>
-                <span className="socials-section-socials-item-link">CEO Acardia Shopping Mall, Senior</span>
-                  
-                <div className="socials-section-socials-item-buttons">
-                  <button className="edit" type="button"><i style={{marginRight:"10px",fontSize:"13px", color:"white"}} className="fa fa-pen-to-square"></i> edit</button>
-                  <button className="delete" type="button"><i style={{marginRight:"10px",fontSize:"13px", color:"white"}} className="fa fa-eraser"></i> delete</button>
-                </div>
-              </div>
-
-              <div className="socials-section-socials-item">
-                <span className="socials-section-socials-item-image">
-                  <img src={image} alt="" />
-                </span>
-                <span className="socials-section-socials-item-title">
-                jambu moses
-                </span>
-                <span className="socials-section-socials-item-link">CEO Acardia Shopping Mall, Senior</span>
-                  
-                <div className="socials-section-socials-item-buttons">
-                  <button className="edit" type="button"><i style={{marginRight:"10px",fontSize:"13px", color:"white"}} className="fa fa-pen-to-square"></i> edit</button>
-                  <button className="delete" type="button"><i style={{marginRight:"10px",fontSize:"13px", color:"white"}} className="fa fa-eraser"></i> delete</button>
-                </div>
-              </div>
-
-              <div className="socials-section-socials-item">
-                <span className="socials-section-socials-item-image">
-                  <img src={image} alt="" />
-                </span>
-                <span className="socials-section-socials-item-title">
-                jambu moses
-                </span>
-                <span className="socials-section-socials-item-link">CEO Acardia Shopping Mall, Senior</span>
-                  
-                <div className="socials-section-socials-item-buttons">
-                  <button className="edit" type="button"><i style={{marginRight:"10px",fontSize:"13px", color:"white"}} className="fa fa-pen-to-square"></i> edit</button>
-                  <button className="delete" type="button"><i style={{marginRight:"10px",fontSize:"13px", color:"white"}} className="fa fa-eraser"></i> delete</button>
-                </div>
-              </div>
+              
+              {
+                merchantData.aboutus.membership.managementTeam.members.map(function(item){
+                  return(
+                    <div className="socials-section-socials-item" key={item.id}>
+                      <span className="socials-section-socials-item-image">
+                        <img src={item.image} alt="" />
+                      </span>
+                      <span className="socials-section-socials-item-title">
+                      {item.name}
+                      </span>
+                      <span className="socials-section-socials-item-link">{item.role}</span>
+                        
+                      <div className="socials-section-socials-item-buttons">
+                        <button className="edit" type="button"><i style={{marginRight:"10px",fontSize:"13px", color:"white"}} className="fa fa-pen-to-square"></i> edit</button>
+                        <button className="delete" type="button"><i style={{marginRight:"10px",fontSize:"13px", color:"white"}} className="fa fa-eraser"></i> delete</button>
+                      </div>
+                    </div>
+                  )
+                })
+              }
               
             </div>
           </div>
@@ -486,8 +352,10 @@ export default function MerchantsComponent() {
 
 
           {/* logos */}
-
         </section>
+
+
+        <DashFooter/>
       </section>
     </>
   )

@@ -2,6 +2,7 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import "../css/main.css";
 import { constantActions } from '../../../store/constantSlice';
+import DashFooter from "./DashFooter";
 
 
 export default function Main() {
@@ -17,8 +18,7 @@ export default function Main() {
     <>
       <section className="HomeComponent-section">
         <h2>home</h2>
-
-
+        <DashFooter/>
       </section>
     </>
   );

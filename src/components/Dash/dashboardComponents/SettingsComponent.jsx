@@ -2,6 +2,7 @@ import React from "react";
 import "../css/SettingsComponent.css";
 import { constantActions } from '../../../store/constantSlice';
 import { useDispatch, useSelector } from "react-redux";
+import DashFooter from "./DashFooter";
 
 export default function SettingsComponent() {
 
@@ -12,12 +13,13 @@ export default function SettingsComponent() {
   dispatch(
     constantActions.updatePageTitles(companyName + " . " + "Settings")
   );
-  dispatch(constantActions.setCurrentPage("Dashboard"));
+  dispatch(constantActions.setCurrentPage("DashSettings"));
 
   return (
     <>
       <section className="SettingsComponent-section">
         <h2>Settings</h2>
+        <DashFooter/>
       </section>
     </>
   );

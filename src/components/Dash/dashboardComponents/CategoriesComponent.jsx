@@ -2,6 +2,7 @@ import React from "react";
 import "../css/CategoriesComponent.css"
 import { constantActions } from '../../../store/constantSlice';
 import { useDispatch, useSelector } from "react-redux";
+import DashFooter from "./DashFooter";
 
 export default function CategoriesComponent() {
 
@@ -10,7 +11,9 @@ export default function CategoriesComponent() {
 
   // page titles
   dispatch(constantActions.updatePageTitles(companyName+" . "+"Categories"));
-  dispatch(constantActions.setCurrentPage("Dashboard"));
+  dispatch(constantActions.setCurrentPage("DashCategories"));
+
+  const DashCategories = useSelector(state=>state.categories.categories);
 
   return (
     <>
@@ -40,97 +43,28 @@ export default function CategoriesComponent() {
             </span>
           </div>
 
-          <div className="products-section-item products-section-item-main">
-            <span className="products-section-item-image"><img src="" alt="" /></span>
-            <span className="products-section-item-name">Servittes Sever</span>
-            <span className="products-section-item-category">todayAd</span>
-            <span className="products-section-item-slug">servittes</span>
-            <span className="products-section-item-description">Plastics Are A Wide Range Of Synthetic Or Semi-Synthetic . Their Plasticity</span>
-            
-            <span className="products-section-item-buttons">
-            <button className="edit" type="button"><i style={{marginRight:"10px",fontSize:"13px", color:"white"}} className="fa fa-pen-to-square"></i> </button>
-                  <button className="delete" type="button"><i style={{marginRight:"10px",fontSize:"13px", color:"white"}} className="fa fa-trash"></i> </button>
-            </span>
-          </div>
+          {
+            DashCategories.map((items)=>{
+              return(
+                <div className="products-section-item products-section-item-main" key={items._id} style={{alignItems:"center"}}>
+                  <span className="products-section-item-image"><img src={items.images.url} alt="" /></span>
+                  <span className="products-section-item-name">{items.category}</span>
+                  <span className="products-section-item-category">{items.type}</span>
+                  <span className="products-section-item-slug">{items.slug}</span>
+                  <span className="products-section-item-description">{items.description.slice(0,100)} ...</span>
+                  
+                  <span className="products-section-item-buttons">
+                  <button className="edit" type="button"><i style={{marginRight:"10px",fontSize:"13px", color:"white"}} className="fa fa-pen-to-square"></i> </button>
+                        <button className="delete" type="button"><i style={{marginRight:"10px",fontSize:"13px", color:"white"}} className="fa fa-trash"></i> </button>
+                  </span>
+                </div>
+              )
+            })
+          }
 
-          <div className="products-section-item products-section-item-main">
-            <span className="products-section-item-image"><img src="" alt="" /></span>
-            <span className="products-section-item-name">Servittes Sever</span>
-            <span className="products-section-item-category">servittes</span>
-            <span className="products-section-item-slug">servittes</span>
-            <span className="products-section-item-description">Plastics Are A Wide Range Of Synthetic Or Semi-Synthetic . Their Plasticity</span>
-            
-            <span className="products-section-item-buttons">
-            <button className="edit" type="button"><i style={{marginRight:"10px",fontSize:"13px", color:"white"}} className="fa fa-pen-to-square"></i> </button>
-                  <button className="delete" type="button"><i style={{marginRight:"10px",fontSize:"13px", color:"white"}} className="fa fa-trash"></i> </button>
-            </span>
-          </div>
 
-          <div className="products-section-item products-section-item-main">
-            <span className="products-section-item-image"><img src="" alt="" /></span>
-            <span className="products-section-item-name">Servittes Sever</span>
-            <span className="products-section-item-category">servittes</span>
-            <span className="products-section-item-slug">servittes</span>
-            <span className="products-section-item-description">Plastics Are A Wide Range Of Synthetic Or Semi-Synthetic . Their Plasticity</span>
-            
-            <span className="products-section-item-buttons">
-            <button className="edit" type="button"><i style={{marginRight:"10px",fontSize:"13px", color:"white"}} className="fa fa-pen-to-square"></i> </button>
-                  <button className="delete" type="button"><i style={{marginRight:"10px",fontSize:"13px", color:"white"}} className="fa fa-trash"></i> </button>
-            </span>
-          </div>
-
-          <div className="products-section-item products-section-item-main">
-            <span className="products-section-item-image"><img src="" alt="" /></span>
-            <span className="products-section-item-name">Servittes Sever</span>
-            <span className="products-section-item-category">servittes</span>
-            <span className="products-section-item-slug">servittes</span>
-            <span className="products-section-item-description">Plastics Are A Wide Range Of Synthetic Or Semi-Synthetic . Their Plasticity</span>
-            
-            <span className="products-section-item-buttons">
-            <button className="edit" type="button"><i style={{marginRight:"10px",fontSize:"13px", color:"white"}} className="fa fa-pen-to-square"></i> </button>
-                  <button className="delete" type="button"><i style={{marginRight:"10px",fontSize:"13px", color:"white"}} className="fa fa-trash"></i> </button>
-            </span>
-          </div>
-
-          <div className="products-section-item products-section-item-main">
-            <span className="products-section-item-image"><img src="" alt="" /></span>
-            <span className="products-section-item-name">Servittes Sever</span>
-            <span className="products-section-item-category">servittes</span>
-            <span className="products-section-item-slug">servittes</span>
-            <span className="products-section-item-description">Plastics Are A Wide Range Of Synthetic Or Semi-Synthetic . Their Plasticity</span>
-            
-            <span className="products-section-item-buttons">
-            <button className="edit" type="button"><i style={{marginRight:"10px",fontSize:"13px", color:"white"}} className="fa fa-pen-to-square"></i> </button>
-                  <button className="delete" type="button"><i style={{marginRight:"10px",fontSize:"13px", color:"white"}} className="fa fa-trash"></i> </button>
-            </span>
-          </div>
-
-          <div className="products-section-item products-section-item-main">
-            <span className="products-section-item-image"><img src="" alt="" /></span>
-            <span className="products-section-item-name">Servittes Sever</span>
-            <span className="products-section-item-category">servittes</span>
-            <span className="products-section-item-slug">servittes</span>
-            <span className="products-section-item-description">Plastics Are A Wide Range Of Synthetic Or Semi-Synthetic . Their Plasticity</span>
-            
-            <span className="products-section-item-buttons">
-            <button className="edit" type="button"><i style={{marginRight:"10px",fontSize:"13px", color:"white"}} className="fa fa-pen-to-square"></i> </button>
-                  <button className="delete" type="button"><i style={{marginRight:"10px",fontSize:"13px", color:"white"}} className="fa fa-trash"></i> </button>
-            </span>
-          </div>
-
-          <div className="products-section-item products-section-item-main">
-            <span className="products-section-item-image"><img src="" alt="" /></span>
-            <span className="products-section-item-name">Servittes Sever</span>
-            <span className="products-section-item-category">servittes</span>
-            <span className="products-section-item-slug">servittes</span>
-            <span className="products-section-item-description">Plastics Are A Wide Range Of Synthetic Or Semi-Synthetic . Their Plasticity</span>
-            
-            <span className="products-section-item-buttons">
-            <button className="edit" type="button"><i style={{marginRight:"10px",fontSize:"13px", color:"white"}} className="fa fa-pen-to-square"></i> </button>
-                  <button className="delete" type="button"><i style={{marginRight:"10px",fontSize:"13px", color:"white"}} className="fa fa-trash"></i> </button>
-            </span>
-          </div>
         </section>
+        <DashFooter/>
       </section>
     </>
   );

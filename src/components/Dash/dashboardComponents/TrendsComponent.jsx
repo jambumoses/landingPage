@@ -2,6 +2,7 @@ import React from "react";
 import "../css/TrendsComponent.css";
 import { constantActions } from '../../../store/constantSlice';
 import { useDispatch, useSelector } from "react-redux";
+import DashFooter from "./DashFooter";
 
 export default function TrendsComponent() {
 
@@ -10,7 +11,9 @@ export default function TrendsComponent() {
 
   // page titles
   dispatch(constantActions.updatePageTitles(companyName+" . "+"Trends"));
-  dispatch(constantActions.setCurrentPage("Dashboard"));
+  dispatch(constantActions.setCurrentPage("DashTrends"));
+
+  const DashTopSells = useSelector(state=>state.products.TopSells);
 
   return (
     <>
@@ -31,97 +34,24 @@ export default function TrendsComponent() {
             </span> */}
           </div>
 
-          <div className="products-section-item products-section-item-main">
-            <span className="products-section-item-image"><img src="" alt="" /></span>
-            <span className="products-section-item-name">Servittes Sever</span>
-            <span className="products-section-item-category">servittes</span>
-            <span className="products-section-item-slug"> 50 orders</span>
-            <span className="products-section-item-description">Plastics Are A Wide Range Of Synthetic Or Semi-Synthetic . Their Plasticity</span>
-            <span className="products-section-item-price">$ 500</span>
-{/*             <span className="products-section-item-buttons">
-            <button className="edit" type="button"><i style={{marginRight:"10px",fontSize:"13px", color:"white"}} className="fa fa-pen-to-square"></i> </button>
-                  <button className="delete" type="button"><i style={{marginRight:"10px",fontSize:"13px", color:"white"}} className="fa fa-trash"></i> </button>
-            </span> */}
-          </div>
-
-          <div className="products-section-item products-section-item-main">
-            <span className="products-section-item-image"><img src="" alt="" /></span>
-            <span className="products-section-item-name">Servittes Sever</span>
-            <span className="products-section-item-category">servittes</span>
-            <span className="products-section-item-slug">45 orders</span>
-            <span className="products-section-item-description">Plastics Are A Wide Range Of Synthetic Or Semi-Synthetic . Their Plasticity</span>
-            <span className="products-section-item-price">$ 500</span>
-{/*             <span className="products-section-item-buttons">
-            <button className="edit" type="button"><i style={{marginRight:"10px",fontSize:"13px", color:"white"}} className="fa fa-pen-to-square"></i> </button>
-                  <button className="delete" type="button"><i style={{marginRight:"10px",fontSize:"13px", color:"white"}} className="fa fa-trash"></i> </button>
-            </span> */}
-          </div>
-
-          <div className="products-section-item products-section-item-main">
-            <span className="products-section-item-image"><img src="" alt="" /></span>
-            <span className="products-section-item-name">Servittes Sever</span>
-            <span className="products-section-item-category">servittes</span>
-            <span className="products-section-item-slug">20 orders</span>
-            <span className="products-section-item-description">Plastics Are A Wide Range Of Synthetic Or Semi-Synthetic . Their Plasticity</span>
-            <span className="products-section-item-price">$ 500</span>
-{/*             <span className="products-section-item-buttons">
-            <button className="edit" type="button"><i style={{marginRight:"10px",fontSize:"13px", color:"white"}} className="fa fa-pen-to-square"></i> </button>
-                  <button className="delete" type="button"><i style={{marginRight:"10px",fontSize:"13px", color:"white"}} className="fa fa-trash"></i> </button>
-            </span> */}
-          </div>
-
-          <div className="products-section-item products-section-item-main">
-            <span className="products-section-item-image"><img src="" alt="" /></span>
-            <span className="products-section-item-name">Servittes Sever</span>
-            <span className="products-section-item-category">servittes</span>
-            <span className="products-section-item-slug">20 orders</span>
-            <span className="products-section-item-description">Plastics Are A Wide Range Of Synthetic Or Semi-Synthetic . Their Plasticity</span>
-            <span className="products-section-item-price">$ 500</span>
-{/*             <span className="products-section-item-buttons">
-            <button className="edit" type="button"><i style={{marginRight:"10px",fontSize:"13px", color:"white"}} className="fa fa-pen-to-square"></i> </button>
-                  <button className="delete" type="button"><i style={{marginRight:"10px",fontSize:"13px", color:"white"}} className="fa fa-trash"></i> </button>
-            </span> */}
-          </div>
-
-          <div className="products-section-item products-section-item-main">
-            <span className="products-section-item-image"><img src="" alt="" /></span>
-            <span className="products-section-item-name">Servittes Sever</span>
-            <span className="products-section-item-category">servittes</span>
-            <span className="products-section-item-slug">20 orders</span>
-            <span className="products-section-item-description">Plastics Are A Wide Range Of Synthetic Or Semi-Synthetic . Their Plasticity</span>
-            <span className="products-section-item-price">$ 500</span>
-{/*             <span className="products-section-item-buttons">
-            <button className="edit" type="button"><i style={{marginRight:"10px",fontSize:"13px", color:"white"}} className="fa fa-pen-to-square"></i> </button>
-                  <button className="delete" type="button"><i style={{marginRight:"10px",fontSize:"13px", color:"white"}} className="fa fa-trash"></i> </button>
-            </span> */}
-          </div>
-
-          <div className="products-section-item products-section-item-main">
-            <span className="products-section-item-image"><img src="" alt="" /></span>
-            <span className="products-section-item-name">Servittes Sever</span>
-            <span className="products-section-item-category">servittes</span>
-            <span className="products-section-item-slug">20 orders</span>
-            <span className="products-section-item-description">Plastics Are A Wide Range Of Synthetic Or Semi-Synthetic . Their Plasticity</span>
-            <span className="products-section-item-price">$ 500</span>
-{/*             <span className="products-section-item-buttons">
-            <button className="edit" type="button"><i style={{marginRight:"10px",fontSize:"13px", color:"white"}} className="fa fa-pen-to-square"></i> </button>
-                  <button className="delete" type="button"><i style={{marginRight:"10px",fontSize:"13px", color:"white"}} className="fa fa-trash"></i> </button>
-            </span> */}
-          </div>
-
-          <div className="products-section-item products-section-item-main">
-            <span className="products-section-item-image"><img src="" alt="" /></span>
-            <span className="products-section-item-name">Servittes Sever</span>
-            <span className="products-section-item-category">servittes</span>
-            <span className="products-section-item-slug">20 orders</span>
-            <span className="products-section-item-description">Plastics Are A Wide Range Of Synthetic Or Semi-Synthetic . Their Plasticity</span>
-            <span className="products-section-item-price">$ 500</span>
-{/*             <span className="products-section-item-buttons">
-            <button className="edit" type="button"><i style={{marginRight:"10px",fontSize:"13px", color:"white"}} className="fa fa-pen-to-square"></i> </button>
-                  <button className="delete" type="button"><i style={{marginRight:"10px",fontSize:"13px", color:"white"}} className="fa fa-trash"></i> </button>
-            </span> */}
-          </div>
+          {
+            DashTopSells.map(function(items){
+              return(
+                <div className="products-section-item products-section-item-main" key={items._id} style={{alignItems:"center"}}>
+                  <span className="products-section-item-image"><img src={Image.url} alt="" /></span>
+                  <span className="products-section-item-name" >{items.name}</span>
+                  <span className="products-section-item-category">{items.category }</span>
+                  <span className="products-section-item-slug"> {items.orders} orders</span>
+                  <span className="products-section-item-description">{items.description.slice(0,100)} ...</span>
+                  <span className="products-section-item-price">{items.initialPrice.formatted_with_symbol}</span>
+                </div>
+              )
+            })
+          }
+ 
         </section>
+
+        <DashFooter/>
       </section>
     </>
   );

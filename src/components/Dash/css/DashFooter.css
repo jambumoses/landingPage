@@ -1,0 +1,18 @@
+.dash-foot-note{
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(211, 211, 211, 0.267);
+    padding: 20px 10px;
+    font-size: 13px;
+    color: gray;
+    justify-content: center;
+    text-transform: capitalize;
+}
+
+
+.dash-foot-note a{
+    display: block;
+    font-size: 13px;
+    padding-left: 10px;
+    text-decoration: none;
+}
