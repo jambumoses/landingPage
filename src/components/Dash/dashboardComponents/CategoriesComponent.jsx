@@ -1,7 +1,17 @@
 import React from "react";
 import "../css/CategoriesComponent.css"
+import { constantActions } from '../../../store/constantSlice';
+import { useDispatch, useSelector } from "react-redux";
 
 export default function CategoriesComponent() {
+
+  const dispatch = useDispatch();
+  const companyName = useSelector(state=>state.merchant.CompanyTitle)
+
+  // page titles
+  dispatch(constantActions.updatePageTitles(companyName+" . "+"Categories"));
+  dispatch(constantActions.setCurrentPage("Dashboard"));
+
   return (
     <>
       <section className="CategoriesComponent-section">

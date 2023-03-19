@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import Aos from "aos";
 import "aos/dist/aos.css";
-import 'bootstrap/dist/css/bootstrap.min.css'
-import Carousel from 'react-bootstrap/Carousel'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Carousel from 'react-bootstrap/Carousel';
 import { useSelector,useDispatch } from 'react-redux';
 
 import { constantActions } from '../store/constantSlice';

@@ -15,6 +15,7 @@ import TrendsComponent from "./TrendsComponent";
 import UsersComponent from "./UsersComponent";
 import EmailListingComponent from "./EmailListingComponent";
 import SettingsComponent from "./SettingsComponent";
+import MessagesComponent from "./MessagesComponent";
 
 export default function DashMain() {
   return (
@@ -31,6 +32,7 @@ export default function DashMain() {
           <Route path="/dashboardorders" component={OrdersComponent} />
           <Route path="/dashboardtrends" component={TrendsComponent} />
           <Route path="/dashboardusers" component={UsersComponent} />
+          <Route path="/messages" component={MessagesComponent} />
           <Route path="/dashboardemaillisting" component={EmailListingComponent} />
           <Route path="/dashboardsettings" component={SettingsComponent} />
         </Switch>

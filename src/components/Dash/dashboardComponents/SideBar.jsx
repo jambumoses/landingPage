@@ -10,13 +10,14 @@ function SideBar() {
           <li><Link to="/dashboard" className="a active" href="">home</Link></li>
           <li><Link to="/dashboardmerchant" className="a" href="">merchant</Link></li>
           <li><Link to="/dashboardbanners" className="a" href="">banners</Link></li>
-          <li><Link to="/dashboardbrands" className="a" href="">brands</Link></li>
-          <li><Link to="/dashboardproducts" className="a" href="">products</Link></li>
-          <li><Link to="/dashboardcategories" className="a" href="">categories</Link></li>
-          <li><Link to="/dashboardorders" className="a" href="">orders</Link></li>
+          <li><Link to="/dashboardbrands" className="a" href="">brands <span style={{fontSize: "13px",paddingLeft:"10px", color: "skyblue"}}>0</span></Link></li>
+          <li><Link to="/dashboardproducts" className="a" href="">products <span style={{fontSize: "13px",paddingLeft:"10px", color: "skyblue"}}>0</span></Link></li>
+          <li><Link to="/dashboardcategories" className="a" href="">categories <span style={{fontSize: "13px",paddingLeft:"10px", color: "skyblue"}}>0</span></Link></li>
+          <li><Link to="/dashboardorders" className="a" href="">orders <span style={{display: "",fontSize:"14px"}}> <i style={{fontSize: "15px",paddingLeft:"10px", color: "skyblue"}} className="fa fa-bell"></i> <sup>10</sup></span> </Link></li>
           <li><Link to="/dashboardtrends" className="a" href="">trends</Link></li>
-          <li><Link to="/dashboardusers" className="a" href="">users</Link></li>
-          <li><Link to="/dashboardemaillisting" className="a" href="">email listing</Link></li>
+          <li><Link to="/dashboardusers" className="a" href="">users </Link></li>
+          <li><Link to="/messages" className="a" href="">messages <span style={{display: "",fontSize:"14px"}}> <i style={{fontSize: "15px",paddingLeft:"10px", color: "lightgreen"}} className="fa fa-bell"></i> <sup>10</sup></span></Link></li>
+          <li><Link to="/dashboardemaillisting" className="a" href="">email listing <span style={{fontSize: "13px",paddingLeft:"10px", color: "skyblue"}}>0</span></Link></li>
           <li><Link to="/dashboardsettings" className="a" href="">settings</Link></li>
         </ul>
       </aside>

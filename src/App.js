@@ -159,13 +159,13 @@ export default function App() {
     dispatch(categoriesActions.getCategories(response.data))
    });
 
-  },[])
+  })
 
   return (
     <>
     <Router>
         {
-          (currentPage != "dashboard") && <Nav/>
+          (currentPage != "Dashboard") && <Nav/>
         }
       
         <Switch>
@@ -195,7 +195,7 @@ export default function App() {
         </Switch>
 
         {
-          (currentPage != "home" && currentPage != "dashboard") && <Footer/>
+          (currentPage != "home" && currentPage != "Dashboard") && <Footer/>
         }
         
     </Router>

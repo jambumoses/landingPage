@@ -54,7 +54,8 @@ export default function Cart() {
     return(
       <div className='cart-container'>
         <div className='cart_img'>
-          <img src={require("./img/product3.png")} alt="" />
+          {/* <img src={require("./img/product3.png")} alt="" /> */}
+          <img src={data.images.url} alt="" />
         </div>
         
         

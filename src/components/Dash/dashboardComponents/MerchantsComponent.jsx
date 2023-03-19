@@ -1,8 +1,19 @@
 import React from 'react'
 import "../css/MerchantComponent.css"
 import image from "../../../components/img/member_remove.png";
+import { useDispatch, useSelector } from 'react-redux';
+import { constantActions } from '../../../store/constantSlice';
+
 
 export default function MerchantsComponent() {
+
+  const dispatch = useDispatch();
+  const companyName = useSelector(state=>state.merchant.CompanyTitle)
+
+  // page titles
+  dispatch(constantActions.updatePageTitles(companyName+" . "+"Merchant"));
+  dispatch(constantActions.setCurrentPage("Dashboard"));
+
   return (
     <>
       <section className="MerchantComponent-section">
