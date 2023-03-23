@@ -202,8 +202,24 @@ export default function App() {
                 {/* Dashboard */}
                 <Route path="/dashboard" component={Dashboard} />
 
+                <Route path="/dashboard" component={Dashboard} />
+                <Route path="/dashboardmerchant" component={Dashboard} />
+                <Route path="/dashboardbanners" component={Dashboard} />
+                <Route path="/dashboardbrands" component={Dashboard} />
+                <Route path="/dashboardproducts" component={Dashboard} />
+                <Route path="/dashboardcategories" component={Dashboard} />
+                <Route path="/dashboardorders" component={Dashboard} />
+                <Route path="/dashboardtrends" component={Dashboard} />
+                <Route path="/dashboardusers" component={Dashboard} />
+                <Route path="/messages" component={Dashboard} />
+                <Route path="/dashboardemaillisting" component={Dashboard} />
+                <Route path="/dashboardsettings" component={Dashboard} />
+
+
+
+
                 {/* 404 */}
-                {/* <Route path='*' component={Home}/> */}
+                <Route path='*' component={Home}/>
         </Switch>
 
         {

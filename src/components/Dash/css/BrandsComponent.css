@@ -6,6 +6,7 @@
     width: 100%;
     padding: 20px;
     padding-right: 2%;
+    padding-bottom: 0px;
     overflow-y: auto;
 }
 
@@ -34,6 +35,86 @@
     border-radius: 5px;
     padding: 5px 20px;
     height: 30px;
+}
+
+
+.addData{
+    display: flex;
+    flex-direction: row;
+    background-color: transparent;
+    margin: 50px 0px;
+}
+
+.addData table tr td{
+    width: 200px;
+    text-transform: capitalize;
+    font-family: poppins, sans-serif;
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.603);
+}
+
+.addimage{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: transparent;
+    padding-left: 50px;
+}
+
+.addimage span{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 150px;
+    background-color: rgba(240, 240, 240, 0.877);
+    border-radius: 10px;
+    color: rgba(0, 0, 0, 0.445);
+}
+
+.addimage input{
+    font-size: 13px;
+    text-transform: capitalize;
+    font-family: poppins, sans-serif;
+}
+
+.addsave{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.addsave button{
+    font-size: 13px;
+    padding: 5px 20px;
+    border: none;
+    outline: none;
+    background-color: rgb(8, 155, 212);
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.addData table tr td input{
+    outline: none;
+    width: 300px;
+    padding-left: 10px;
+    border: 1px solid rgba(128, 128, 128, 0.658);
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.603);
+}
+
+.addData table tr td textarea{
+    min-height: 100px;
+    max-height: 100px;
+    min-width: 300px;
+    max-width: 300px;
+    padding: 10px;
+    font-family: poppins, sans-serif;
+    font-size: 13px;
+    border: 1px solid rgba(128, 128, 128, 0.658);
+    color: rgba(0, 0, 0, 0.603);
 }
 
 
@@ -67,10 +148,14 @@
 }
 
 .BrandsDash-item-thumbnail{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     background-color: transparent;
     width: 250px;
     height: 150px;
     margin-left: 20px;
+    padding: 0px;
 }
 
 .BrandsDash-item-thumbnail img{

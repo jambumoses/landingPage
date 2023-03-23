@@ -26,7 +26,7 @@ function SideBar() {
           <li><Link to="/dashboardproducts" className={`a ${(currentPage == "DashProducts") && 'active'}`} href="">products <span style={{fontSize: "13px",paddingLeft:"10px", color: "skyblue"}}>{Dashproducts.length}</span></Link></li>
           <li><Link to="/dashboardcategories" className={`a ${(currentPage == "DashCategories") && 'active'}`} href="">categories <span style={{fontSize: "13px",paddingLeft:"10px", color: "skyblue"}}>{Categories.length}</span></Link></li>
           <li><Link to="/dashboardorders" className={`a ${(currentPage == "DashOrders") && 'active'}`} href="">orders <span style={{display: "",fontSize:"14px"}}> <i style={{fontSize: "15px",paddingLeft:"10px", color: "skyblue"}} className="fa fa-bell"></i> <sup>10</sup></span> </Link></li>
-          <li><Link to="/dashboardtrends" className={`a ${(currentPage == "DashTrends") && 'active'}`} href="">trends</Link></li>
+          <li><Link to="/dashboardtrends" className={`a ${(currentPage == "DashTrends") && 'active'}`} href="">*trends</Link></li>
           <li><Link to="/dashboardusers" className={`a ${(currentPage == "DashUsers") && 'active'}`} href="">users </Link></li>
           <li><Link to="/messages" className={`a ${(currentPage == "DashMessages") && 'active'}`} href="">messages <span style={{display: "",fontSize:"14px"}}> <i style={{fontSize: "15px",paddingLeft:"10px", color: "lightgreen"}} className="fa fa-bell"></i> <sup style={{fontSize: "12px", color: "black"}}>{DashMessages.length}</sup></span></Link></li>
           <li><Link to="/dashboardemaillisting" className={`a ${(currentPage == "DashEmailListing") && 'active'}`} href="">email listing <span style={{fontSize: "13px",paddingLeft:"10px", color: "skyblue"}}> {Emails.length}</span></Link></li>

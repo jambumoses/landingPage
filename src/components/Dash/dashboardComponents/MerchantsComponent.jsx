@@ -1,5 +1,6 @@
-import React from 'react'
-import "../css/MerchantComponent.css"
+import React from 'react';
+import axios from "axios";
+import "../css/MerchantComponent.css";
 import image from "../../../components/img/member_remove.png";
 import { useDispatch, useSelector } from 'react-redux';
 import { constantActions } from '../../../store/constantSlice';
@@ -7,6 +8,19 @@ import DashFooter from './DashFooter';
 
 
 export default function MerchantsComponent() {
+
+    // brands data
+    const brands = axios.create({
+      baseURL: "http://localhost:3500/arafat/api/brands",
+      Headers: {
+        "Content-type": "application/json",
+      },
+    });
+    
+       // brands data
+       brands.get().then((response)=>{
+        
+       });
 
   const dispatch = useDispatch();
   const companyName = useSelector(state=>state.merchant.CompanyTitle)
