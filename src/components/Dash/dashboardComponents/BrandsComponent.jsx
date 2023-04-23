@@ -64,6 +64,7 @@ export default function BrandsComponent() {
   const [brandsName, setBrandsName] = useState("");
   const [brandsDescription, setBrandsDescription] = useState("");
   const [brandsLink, setBrandsLink] = useState("");
+  
 
   function showAdd(data = null) {
     setShowInputs("show");
@@ -76,11 +77,13 @@ export default function BrandsComponent() {
     if (data !== null) {
       setInputMode("update");
 
-      setBrandsId(data._id)
+      setBrandsId(data._id);
       setBrandsCount(data.count);
       setBrandsName(data.name);
       //setBrandsImage(data.image);
-      setBrandsImage("https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.rolls-roycemotorcarsphiladelphia.com%2Fimagetag%2F12651%2F2%2Fl%2FNew-2020-Rolls-Royce-Culllinan-Black-Badge.jpg&tbnid=WBMnJSCERdwbbM&vet=12ahUKEwiLns6Rr7_-AhVjkScCHXWeDK8QMyg2egQIARA-..i&imgrefurl=https%3A%2F%2Fwww.rolls-roycemotorcarsphiladelphia.com%2Fnew-vehicle-2020-rolls-royce-culllinan-black-badge-c-12651%2F&docid=sypvlQuzP7_psM&w=1920&h=1280&q=rolls%20royce%20black%20badge%202020&client=opera&ved=2ahUKEwiLns6Rr7_-AhVjkScCHXWeDK8QMyg2egQIARA-");
+      setBrandsImage(
+        "https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.rolls-roycemotorcarsphiladelphia.com%2Fimagetag%2F12651%2F2%2Fl%2FNew-2020-Rolls-Royce-Culllinan-Black-Badge.jpg&tbnid=WBMnJSCERdwbbM&vet=12ahUKEwiLns6Rr7_-AhVjkScCHXWeDK8QMyg2egQIARA-..i&imgrefurl=https%3A%2F%2Fwww.rolls-roycemotorcarsphiladelphia.com%2Fnew-vehicle-2020-rolls-royce-culllinan-black-badge-c-12651%2F&docid=sypvlQuzP7_psM&w=1920&h=1280&q=rolls%20royce%20black%20badge%202020&client=opera&ved=2ahUKEwiLns6Rr7_-AhVjkScCHXWeDK8QMyg2egQIARA-"
+      );
       setBrandsDescription(data.description);
       setBrandsLink(data.link);
     } else {
@@ -88,10 +91,12 @@ export default function BrandsComponent() {
       // for new data
       setInputMode("add");
 
-      setBrandsId("")
+      setBrandsId("");
       setBrandsCount("");
       setBrandsName("");
-      setBrandsImage("https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.rolls-roycemotorcarsphiladelphia.com%2Fimagetag%2F12651%2F2%2Fl%2FNew-2020-Rolls-Royce-Culllinan-Black-Badge.jpg&tbnid=WBMnJSCERdwbbM&vet=12ahUKEwiLns6Rr7_-AhVjkScCHXWeDK8QMyg2egQIARA-..i&imgrefurl=https%3A%2F%2Fwww.rolls-roycemotorcarsphiladelphia.com%2Fnew-vehicle-2020-rolls-royce-culllinan-black-badge-c-12651%2F&docid=sypvlQuzP7_psM&w=1920&h=1280&q=rolls%20royce%20black%20badge%202020&client=opera&ved=2ahUKEwiLns6Rr7_-AhVjkScCHXWeDK8QMyg2egQIARA-");
+      setBrandsImage(
+        "https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.rolls-roycemotorcarsphiladelphia.com%2Fimagetag%2F12651%2F2%2Fl%2FNew-2020-Rolls-Royce-Culllinan-Black-Badge.jpg&tbnid=WBMnJSCERdwbbM&vet=12ahUKEwiLns6Rr7_-AhVjkScCHXWeDK8QMyg2egQIARA-..i&imgrefurl=https%3A%2F%2Fwww.rolls-roycemotorcarsphiladelphia.com%2Fnew-vehicle-2020-rolls-royce-culllinan-black-badge-c-12651%2F&docid=sypvlQuzP7_psM&w=1920&h=1280&q=rolls%20royce%20black%20badge%202020&client=opera&ved=2ahUKEwiLns6Rr7_-AhVjkScCHXWeDK8QMyg2egQIARA-"
+      );
       setBrandsDescription("");
       setBrandsLink("");
     }
@@ -100,29 +105,40 @@ export default function BrandsComponent() {
   function saveNewEntry() {
     // adding new data
     if (inputMode == "add") {
-
       let information = {
         count: brandsCount,
         name: brandsName,
         description: brandsDescription,
         image: brandsImage,
-        link: brandsLink,        
-      }
-      const Config ={
+        link: brandsLink,
+      };
+      const Config = {
         headers: {
-          'Content-Type': 'application/x-www-form-urlencoded'
-        }
-      }
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+      };
+
+      if (
+        information.count !== "" &&
+        information.name !== "" &&
+        information.description !== "" &&
+        information.image !== "" &&
+        information.link !== ""
+      ) {
         // posting data to API
-        axios.post("http://localhost:3500/arafat/api/brands/", information, {Config})
+        axios
+          .post("http://localhost:3500/arafat/api/brands/", information, {
+            Config,
+          })
           .then(function (response) {
             console.log(response);
           })
           .catch(function (error) {
             console.log(error);
           });
-    }
-
+        // end of request
+      }
+    } // end of add function
 
     // updating data
     if (inputMode == "update") {
@@ -132,32 +148,33 @@ export default function BrandsComponent() {
         name: brandsName,
         description: brandsDescription,
         image: brandsImage,
-        link: brandsLink,        
-      }
-/*       if (
-        brandsCount !== "" &&
-        brandsName !== "" &&
-        brandsDescription !== "" &&
-        brandsImage !== "" &&
-        brandsLink !== ""
-      ) {} */
+        link: brandsLink,
+      };
 
+      if (
+        information.id !== "" &&
+        information.count !== "" &&
+        information.name !== "" &&
+        information.description !== "" &&
+        information.image !== "" &&
+        information.link !== ""
+      ) {
         // posting data to API
-
         axios({
           method: "put",
           url: "http://localhost:3500/arafat/api/brands",
-          data: information
+          data: information,
         })
-        .then(function (response) {
-          console.log(response);
-        })
-        .catch(function (error) {
-          console.log(error);
-        });
-
+          .then(function (response) {
+            console.log(response);
+          })
+          .catch(function (error) {
+            console.log(error);
+          });
+        // end of request
       }
-  }
+    } //end of update
+  } // end of function
 
   function DeleteBrand(_id) {
     axios
