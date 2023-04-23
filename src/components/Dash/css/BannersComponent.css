@@ -1,16 +1,16 @@
-.BannersComponent-section{
-    background-color: white;
-    margin-top: 5px;
-    margin-left: 10px;
-    height: 100%;
-    width: 100%;
-    padding: 20px;
-    padding-right: 2%;
-    overflow-y: auto;
+.BannersComponent-section {
+  background-color: white;
+  margin-top: 5px;
+  margin-left: 10px;
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+  padding-right: 2%;
+  overflow-y: auto;
 }
 
-.BannersComponent-section h2{
-    font-size: 30px;
-    text-transform: capitalize;
-    color: rgba(0, 0, 0, 0.445);
+.BannersComponent-section h2 {
+  font-size: 30px;
+  text-transform: capitalize;
+  color: rgba(0, 0, 0, 0.445);
 }

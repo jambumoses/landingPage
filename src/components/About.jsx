@@ -76,7 +76,7 @@ export default function About() {
   return (
     <>
     <section className='about-wrapper'>
-      <img src={aboutBannerImage} alt="" />
+      <img src={"aboutBannerImage"} alt="" />
     </section>
 
     <section className='about-container'>

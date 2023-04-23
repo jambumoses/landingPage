@@ -131,6 +131,10 @@ const BrandsSlice = createSlice({
     getBrands(state, actions) {
       state.brands.brands = actions.payload;
     },
+
+    refreshBrands(state){
+      
+    }
   },
 });
 

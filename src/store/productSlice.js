@@ -4,7 +4,7 @@ import image from "../components/img/nobg/77f336891733e356d4d9c8a93ed9c942-remov
 const productSlice = createSlice({
   name: "products",
   initialState: {
-    TopSells: [
+    TopSells: [],/* [
       {
         _id: 1,
         name: "servittes sever",
@@ -155,7 +155,7 @@ const productSlice = createSlice({
           formatted_with_symbol: "$ 500",
         },
       },
-    ],
+    ], */
     products: [],
   }, // end of products object
   reducers: {

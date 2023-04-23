@@ -93,6 +93,13 @@ export default function App() {
       },
     });
 
+    // products data
+    const topsells = axios.create({
+      baseURL: "http://localhost:3500/arafat/api/topsells",
+      Headers: {
+        "Content-type": "application/json",
+      },
+    });
 
     // categories data
     const categories = axios.create({
@@ -153,6 +160,11 @@ export default function App() {
    products.get().then((response)=>{
     dispatch(productActions.getProducts(response.data))
    });
+
+  // topsells data
+    topsells.get().then((response)=>{
+    dispatch(productActions.getTrends(response.data))
+  });
 
   // categories data
    categories.get().then((response)=>{
