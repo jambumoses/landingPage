@@ -22,9 +22,9 @@ function SideBar() {
           <li><Link to="/dashboard" className={`a ${(currentPage == "Dashboard") && 'active'}`} href="">home</Link></li>
           <li><Link to="/dashboardmerchant" className={`a ${(currentPage == "DashMerchant") && 'active'}`} href="">merchant</Link></li>
           <li><Link to="/dashboardbanners" className={`a ${(currentPage == "DashBanners") && 'active'}`} href="">banners</Link></li>
-          <li><Link to="/dashboardbrands" className={`a ${(currentPage == "DashBrands") && 'active'}`} href="">brands <span style={{fontSize: "13px",paddingLeft:"10px", color: "skyblue"}}>{Dashbrands.length}</span></Link></li>
-          <li><Link to="/dashboardproducts" className={`a ${(currentPage == "DashProducts") && 'active'}`} href="">products <span style={{fontSize: "13px",paddingLeft:"10px", color: "skyblue"}}>{Dashproducts.length}</span></Link></li>
-          <li><Link to="/dashboardcategories" className={`a ${(currentPage == "DashCategories") && 'active'}`} href="">categories <span style={{fontSize: "13px",paddingLeft:"10px", color: "skyblue"}}>{Categories.length}</span></Link></li>
+          <li><Link to="/dashboardbrands" className={`a ${(currentPage == "DashBrands") && 'active'}`} href="">*brands <span style={{fontSize: "13px",paddingLeft:"10px", color: "skyblue"}}>{Dashbrands.length}</span></Link></li>
+          <li><Link to="/dashboardproducts" className={`a ${(currentPage == "DashProducts") && 'active'}`} href="">*products <span style={{fontSize: "13px",paddingLeft:"10px", color: "skyblue"}}>{Dashproducts.length}</span></Link></li>
+          <li><Link to="/dashboardcategories" className={`a ${(currentPage == "DashCategories") && 'active'}`} href="">*categories <span style={{fontSize: "13px",paddingLeft:"10px", color: "skyblue"}}>{Categories.length}</span></Link></li>
           <li><Link to="/dashboardorders" className={`a ${(currentPage == "DashOrders") && 'active'}`} href="">orders <span style={{display: "",fontSize:"14px"}}> <i style={{fontSize: "15px",paddingLeft:"10px", color: "skyblue"}} className="fa fa-bell"></i> <sup>10</sup></span> </Link></li>
           <li><Link to="/dashboardtrends" className={`a ${(currentPage == "DashTrends") && 'active'}`} href="">*trends</Link></li>
           <li><Link to="/dashboardusers" className={`a ${(currentPage == "DashUsers") && 'active'}`} href="">users </Link></li>

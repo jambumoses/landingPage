@@ -43,7 +43,7 @@ export default function App() {
   const currentPage = useSelector(state=>state.constant.currentPage)
   const PageTitles = useSelector(state=>state.constant.currentPageTitle)
 
-
+/* 
   // banner information
   const homeBanner = axios.create({
     baseURL: "http://localhost:3500/arafat/api/banners/homebanner",
@@ -107,7 +107,7 @@ export default function App() {
       Headers: {
         "Content-type": "application/json",
       },
-    });
+    }); */
 
     
 
@@ -132,46 +132,47 @@ export default function App() {
     dispatch(cartActions.updateCartCount());
 
     //updating home Banner from database
-    homeBanner.get('?_limit=10').then((response) => {
+/*     homeBanner.get('?_limit=10').then((response) => {
       dispatch(bannerActions.getHomeBanner(response.data));
-   });
+   }); */
 
    //updating brands Banner from database
-   brandsBanner.get().then((response)=>{
+/*    brandsBanner.get().then((response)=>{
     dispatch(bannerActions.getBrandsBanner(response.data[0]))
-   });
+   }); */
 
    //updating contact Banner from database
-   contactBanner.get().then((response)=>{
+/*    contactBanner.get().then((response)=>{
     dispatch(bannerActions.getContactBanner(response.data[0]))
-   });
+   }); */
 
    //updating about banner
-   aboutBanner.get().then((response)=>{
+/*    aboutBanner.get().then((response)=>{
     dispatch(bannerActions.getAboutBanner(response.data[0]))
-   });
+   }); */
 
    // brands data
-   brands.get().then((response)=>{
+/*    brands.get().then((response)=>{
     dispatch(BrandsActions.getBrands(response.data))
-   });
+   }); */
 
   // products data
-   products.get().then((response)=>{
+/*    products.get().then((response)=>{
     dispatch(productActions.getProducts(response.data))
-   });
+   }); */
 
   // topsells data
-    topsells.get().then((response)=>{
+/*     topsells.get().then((response)=>{
     dispatch(productActions.getTrends(response.data))
-  });
+  }); */
 
   // categories data
-   categories.get().then((response)=>{
+/*    categories.get().then((response)=>{
     dispatch(categoriesActions.getCategories(response.data))
-   });
+   }); */
 
   })
+
 
   return (
     <>

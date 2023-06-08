@@ -43,7 +43,7 @@ export default function Brands() {
 
   
   // brands data
-  const brands = axios.create({
+/*   const brands = axios.create({
     baseURL: "http://localhost:3500/arafat/api/brands",
     Headers: {
       "Content-type": "application/json",
@@ -53,7 +53,7 @@ export default function Brands() {
      // brands data
      brands.get().then((response)=>{
       dispatch(BrandsActions.getBrands(response.data))
-     });
+     }); */
      
   // brands data
   const BrandsData = useSelector(state=>state.brands.brands)

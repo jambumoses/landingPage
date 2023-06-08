@@ -26,6 +26,7 @@ export default function CategoriesComponent() {
   } else {
     $("#slideform").show();
   }
+  
 
   const [CategoryId, setCategoryId] = useState("");
   const [Category, setCategory] = useState("");

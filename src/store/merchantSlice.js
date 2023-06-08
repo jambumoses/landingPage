@@ -4,10 +4,10 @@ const merchantSlice = createSlice({
   name: "merchant",
   initialState: {
     /* company */
-    CompanyTitle: "jambugift.com",
+    CompanyTitle: "eudaimonia.com",
     CompanyDescription:
-      "gift the number 1 distributor of fast moving consumer goods",
-    footerCompanyTitle: "african queen No1 Distributor LTD",
+      "\"your reliable partner\"",
+    footerCompanyTitle: "eudaimonia enterprises No1 Distributor LTD",
 
     misson:
       "To efficiently distribute quality products that delight customers and deliver sustainable stakeholder value",
@@ -46,14 +46,14 @@ const merchantSlice = createSlice({
         board: {
           title: "Governance Board",
           members: [
-            { 
-                id:1,
+            {
+              id: 1,
               image: "./img/member_remove.png",
               name: "mukulish arafat",
               role: "CEO acardia shopping mall, Senior",
             },
             {
-                id:2,
+              id: 2,
               image: "./img/member_remove.png",
               name: "jambu moses",
               role: "software engineer, systems manager",
@@ -64,27 +64,32 @@ const merchantSlice = createSlice({
           title: "The Management Team",
           members: [
             {
-                id:1,
+              id: 1,
               image: "",
               name: "mukulish arafat",
               role: "CEO acardia shopping mall",
             },
             { image: "", name: "jambu moses", role: "software engineer" },
             {
-                id:2,
+              id: 2,
               image: "",
               name: "mukulish arafat",
               role: "CEO acardia shopping mall",
             },
             {
-                id:3,
+              id: 3,
               image: "",
               name: "mukulish arafat",
               role: "CEO acardia shopping mall",
             },
-            { id: 4,image: "", name: "jambu moses", role: "software engineer" },
             {
-                id:5,
+              id: 4,
+              image: "",
+              name: "jambu moses",
+              role: "software engineer",
+            },
+            {
+              id: 5,
               image: "",
               name: "mukulish arafat",
               role: "CEO acardia shopping mall",
@@ -98,21 +103,27 @@ const merchantSlice = createSlice({
     Contact: {
       heading: "contact us",
       location: {
-        address: "namanve plot 1769 jinja",
+        address: "Munuki, Suk melisia. Opp. Jeruslem pharmacy Juba South Sudan",
         fontawesome_icon: "fa fa-location-dot",
         link: "https://maps.google.com",
       },
       phone: {
         type: "work",
-        title: "+256708093144",
+        title: "+211-920-017-173",
         fontawesome_icon: "fa fa-phone",
-        link: "+256708093144",
+        link: "+211-920-017-173",
+      },
+      whatsup: {
+        type: "whatsup",
+        title: "+211-920-882-696",
+        fontawesome_icon: "fa fa-phone",
+        link: "+211-920-882-696",
       },
       email: {
         type: "Email",
-        mail: "info@africangqueen.co.ug",
+        mail: "eenterprise05@gmail.com",
         fontawesome_icon: "fa fa-envelope",
-        link: "info@africangqueen.co.ug",
+        link: "eenterprise05@gmail.com",
       },
     },
 
